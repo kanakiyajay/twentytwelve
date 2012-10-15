@@ -1,79 +1,145 @@
-@media screen and (min-width: 280px) and (max-width: 600px){
-	#megamenu{
-		position: static;
-	}
-	#megamenu .col:not(:first-child) {
-		width: 50%;
-	}
-	#logowrapper .col{
-		width: 100%;
-		text-align: center;
-	}
-	#logowrapper .span_2_of_5{
-		display: none;
-	}
-}
-@media screen and (min-width: 900px) {
-
-
+/*Resetting css for consistency*/
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong,
+sub, sup, var,b, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption,
+tbody, tfoot, thead, tr, th, td,article, aside, canvas, details,figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,time,mark, 
+audio, video {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+ body {line-height: 1;}
+ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+ nav ul {list-style: none;}
+ blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+ a {margin: 0;padding: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+ ins {background-color: #ff9;color: #000;text-decoration: none;}
+ mark {background-color: #ff9;color: #000; font-style: italic;font-weight: bold;}del {text-decoration:  line-through;}
+ abbr[title], dfn[title] {border-bottom: 1px dotted;cursor: help;}
+ table {border-collapse: collapse;border-spacing: 0;}
+ hr {display: block;height: 1px;border: 0; border-top: 1px solid #cccccc;margin: 1em 0;padding: 0;}
+ input, select {  vertical-align: middle;}
+ ul{ 	list-style: none; }
+ body{overflow-x:hidden ;font-family: 'TradeGothicW01BoldCn20Regular',Helvetica,Arial,san-serif;}
+ a{text-decoration: none;color: inherit;}
 ::-webkit-scrollbar-corner{background:transparent;display:none}
 ::-webkit-scrollbar{width:8px;height:8px}
 ::-webkit-scrollbar-track{background:lightyellow;}
 ::-webkit-scrollbar-thumb{background:darkred;-webkit-box-shadow:none}
-.clearfix{clear: both;}
-.col {float:left;height:100%;}
 .row{width: 100%;}
+.col {float:left;height:100%;}
+.unhidden{display: none;}
 /*These are all the widths of elements*/
 .span_1_of_5{ width :20%;}
 .span_2_of_5{ width :40%;}
 .span_1_of_1{ width: 100%;}
+/*Heights*/
+.row:nth-of-type(1){
+   position: fixed;
+   left: 0;
+   top: 0;
+}
+
 .row:nth-of-type(2){
    height:90px;
    margin-top: 5px;
 }
 .row:nth-of-type(4){
-   height:600px;
-   margin-top: 5px;
-}
-/*The row containing the graphic*/
-#graphicwrapper{
    height:550px;
    margin-top: 5px;
    background-color: black;
 }
+.clearfix{clear: both;}
+#hiddenlogo {
+	font-size: 1.3em;
+	width: 30%;
+	padding-left: 4%;
+}
+
+#menuicon{
+	position: fixed;
+	display: block;
+	right: 0;
+	top: 0;
+	width: 30px;
+	padding: 4px;
+	height: 30px;
+	z-index: 200;
+	border: 4px solid #A56705;
+	cursor: pointer;
+	display: block;
+	background-repeat: no-repeat;
+	background: url(images/nav.png) 50% 50% #A56705;
+	padding: 0;
+	text-indent: -999em;
+}
+
 #megamenu{
-	height: 3px;
+	padding: 0.2% 0%;	
 	background: rgba(231, 144, 13, 0.7);
 	color: white;
-	-webkit-transition : all 0.5s ease-in;
-	 position: fixed;
-   left: 0;
-   top: 0;
-
+	-webkit-transition : all 0.5s ease-out;
+	z-index: 100;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0.25, rgba(203, 113, 3, 1)),color-stop(1.0, rgba(227, 125, 17, 1)));
+	overflow: hidden;
+}
+.hidden>.menutag{
+	text-align: center;
+	margin-bottom: 10px;
 }
 #menuimage{
-	background: url() white no-repeat;
-	padding: 1%;
+	margin: 0 auto;
+	background-image: url(images/call.jpg);
+	background-size: cover;
+	width: 120px;
+	height: 70px;
 }
-.menutag{
+#menudescription{
+	font-size: 0.8em;
+	width: 140px;
+	margin: 0 auto;
+	padding-top: 7px;
+	color: black;
+}
+#megamenu .menutag{
+	padding-bottom: 4px;
+	position: relative;
+	height: 14px;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0.25, rgba(227, 125, 17, 1)),color-stop(1.0, rgba(203, 113, 3, 1)));
+	background: -moz-linear-gradient(center top,rgba(203, 113, 3, 1),rgba(227, 125, 17, 1));
+	background: -o-linear-gradient(top,rgba(203, 113, 3, 1) 25%,rgba(227, 125, 17, 1) 100%);
+}
+#megamenu ul{
+	background: rgba(231, 144, 13, 0.7);
+	color: whitesmoke;
+	-webkit-transition : all 0.5s ease-out;	
+}
+.menutag a{
 	font-weight: bold;
-	font-size: 1.2em;
+	font-size: 1em;
+	width: 100%;
+	color: whitesmoke;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 2%;left: 2%;
+	text-transform: uppercase;
+}
+#megamenu li{
+	line-height: 1.45;
+	color: white;
+	-webkit-transition:0.5s ease-in;
+}
+#megamenu li:first-child{
+	padding-top: 8px;
+}
+#megamenu li:hover{
+	line-height: 1.45;
+	background-color: white;
+	color: black;
+}
+#megamenu li a{
+	font-size: 0.87em;
 }
 #logo img{
 	float: left;
-}
-.span_2_of_5>h3{
-color: transparent;
-text-align: right;
-width: 20%;
-height: 50%;
-cursor: pointer;
-float: right;
-padding-right: 8%;
-}
-.bottom>h3{
-background: url(images/top.jpg) no-repeat;
-
 }
 #logotext{
 	text-align: center;
@@ -81,14 +147,7 @@ background: url(images/top.jpg) no-repeat;
 #maincta{
 	position: relative;
 }
-#thegraphic{
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	z-index: 2;
-	left: 0;
-	top: 0;
-}
+
 #registercta{
 	z-index: 4;
 	position: absolute;
@@ -100,5 +159,38 @@ background: url(images/top.jpg) no-repeat;
 	padding: 1.5%;
 	display: none;
 	background-image : -webkit-linear-gradient(top,darkred 0%,brown 100%) ; 
+}
+
+@media only screen and (max-width: 580px) {
+
+.hidden{display: none;}
+.unhidden{display: block;}
+#logo{
+	width: 40%;
+	margin: 0 auto;
+	float: none;
+}
+.span_1_of_5{ 
+	width : 100%;
+}
+#megamenu .menutag{
+
+	padding: 10px 0 ;
+	border-top: 1px solid white;
+	border-bottom: 1px solid darkgray;
+	padding-left: 10px;
+	background: url(images/arrow.png) 97% 50% no-repeat;
+
+}
+.span_2_of_5{ width : 100%;}
+#hiddenlogo{
+	padding: 15px 0;
+	padding-left: 10px;
+}
+#megamenu li{
+	display: none;
+}
+.menutag a{
+	top: 26%;
 }
 }
