@@ -437,3 +437,28 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20120827', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+function login_css(){
+
+	wp_enqueue_style('login_css',get_template_directory_uri().'/login.css');
+
+}
+add_action('login_head','login_css');
+
+function remove_footer_admin(){
+	echo "&copy; 2012 Jay Kanakiya";
+}
+add_filter('admin_footer_text','remove_footer_admin');
+
+function wpc_dashboard_widgets(){
+	global $wp_meta_boxes;
+	//Today Widget
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
+}
+add_action('wp_dashboard_setup','wpc_dashboard_widgets');
+function new_admin_head(){
+	echo '<link rel="stylesheet" type="text/css" href="' .content_url('themes/twentytwelve/new-admin.css', __FILE__). '">';
+}
+add_action('admin_head', 'new_admin_head');
