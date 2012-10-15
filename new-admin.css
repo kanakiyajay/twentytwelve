@@ -1,7 +1,11 @@
-#wp-admin-bar-logo {
+body{
+	background: url(images/tiny_grid.png) white;
+}
+#wp-admin-bar-wp-logo {
   display: none;
 }
 #dashboard_right_now .versions{
 	text-indent: -9999px;
 	height: 1px;
 }
+

@@ -456,6 +456,8 @@ function wpc_dashboard_widgets(){
 	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 }
 add_action('wp_dashboard_setup','wpc_dashboard_widgets');
 function new_admin_head(){
