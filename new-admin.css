@@ -1,7 +1,7 @@
 body{
 	background: url(images/tiny_grid.png) white;
 }
-#wp-admin-bar-wp-logo {
+#wp-admin-bar-wp-logo ,#footer-upgrade{
   display: none;
 }
 #dashboard_right_now .versions{
