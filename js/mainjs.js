@@ -8,7 +8,12 @@ jQuery(document).ready(function ($) {
 
     autoPlay : true,
     autoPlayDelay : 300,
-    transitionThreshold : 200
+    transitionThreshold : 250,
+    animateStartingFrameIn: true,
+    preloadTheseFrames: [1],
+    preloadTheseImages: [
+          "../images/placeholder.png"
+        ]
 
   }
   var sequence = $("#maincta").sequence().data("sequence");

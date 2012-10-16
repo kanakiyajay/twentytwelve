@@ -122,21 +122,29 @@
         <div class="row">
             <div class="col span_1_of_1">                
             <div id="maincta">
+            <img class="prev" src="<?php echo get_template_directory_uri(); ?>/images/bt-prev.png" alt="Previous Frame" />
+            <img class="next" src="<?php echo get_template_directory_uri(); ?>/images/bt-next.png" alt="Next Frame" />
                 <ul>
                     <li>
                        <div class="info1">
-                            <p>Frame 1</p>
+                            <h2 class="sl-title">The First Frame</h2>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="sl-image">
+                            <p>Description 1</p>
                         </div> 
                         <!--<img src="images/default.jpg" class="default animate-in" alt="Deafult Image">-->
                     </li>
                     <li>
                        <div class="info2">
-                            <p>Frame 2</p>
+                        <h2 class="sl-title">The Second Frame</h2>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="sl-image">
+                            <p>Description 2</p>
                         </div> 
                     </li>
                     <li>
                        <div class="info3">
-                            <p>Frame 320</p>
+                            <h2 class="sl-title">The Third Frame</h2>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="sl-image">
+                            <p>Description 3</p>
                         </div> 
                     </li>
                 </ul>

@@ -1,5 +1,8 @@
-body{
+body,#wpcontent{
 	background: url(images/tiny_grid.png) white;
+}
+#tinymce{
+	background-color: white;
 }
 #wp-admin-bar-wp-logo ,#footer-upgrade{
   display: none;

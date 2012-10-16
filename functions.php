@@ -470,8 +470,13 @@ function xyz_filter_up_mail_from($email){
 		$sitename = substr($sitename, 4);
 	}
 	$myfront = "jaykanakiya@";
-	$myback = $sitename;
+	$myback = "vitmelange.com";
 	$myfrom = $myfrom.$myback;
 	return $myfrom;
 }
+function new_mail_from_name($old)
+{
+	return 'Melange';
+}
 add_filter("wp_mail_from","xyz_filter_up_mail_from");
+add_filter("wp_mail_from_name","new_mail_from_name");
