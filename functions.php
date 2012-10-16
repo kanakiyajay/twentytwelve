@@ -464,3 +464,14 @@ function new_admin_head(){
 	echo '<link rel="stylesheet" type="text/css" href="' .content_url('themes/twentytwelve/new-admin.css', __FILE__). '">';
 }
 add_action('admin_head', 'new_admin_head');
+function xyz_filter_up_mail_from($email){
+	$sitename = strtolower($_SERVER['SERVER_NAME']);
+	if (substr($sitename, 0,4)=='www.') {
+		$sitename = substr($sitename, 4);
+	}
+	$myfront = "jaykanakiya@";
+	$myback = $sitename;
+	$myfrom = $myfrom.$myback;
+	return $myfrom;
+}
+add_filter("wp_mail_from","xyz_filter_up_mail_from");

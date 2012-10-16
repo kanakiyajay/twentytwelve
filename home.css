@@ -22,17 +22,20 @@ audio, video {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical
 ::-webkit-scrollbar-corner{background:transparent;display:none}
 ::-webkit-scrollbar{width:8px;height:8px}
 ::-webkit-scrollbar-track{background:lightyellow;}
-::-webkit-scrollbar-thumb{background:darkred;-webkit-box-shadow:none}
-.row{width: 100%;}
+::-webkit-scrollbar-thumb{background:darkred;}
+.row,.subrow{width: 100%;}
+.subrow{height: 50%;}
 .col {float:left;height:100%;}
 .unhidden{display: none;}
 /*These are all the widths of elements*/
 .span_1_of_5{ width :20%;}
 .span_2_of_5{ width :40%;}
 .span_1_of_1{ width: 100%;}
+.span_1_of_2{width: 50%;}
+.span_1_of_3{width: 33.3333%	}
 /*Heights*/
 .row:nth-of-type(1){
-   position: fixed;
+   /*position: fixed;*/
    left: 0;
    top: 0;
 }
@@ -41,11 +44,7 @@ audio, video {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical
    height:90px;
    margin-top: 5px;
 }
-.row:nth-of-type(4){
-   height:550px;
-   margin-top: 5px;
-   background-color: black;
-}
+
 .clearfix{clear: both;}
 #hiddenlogo {
 	font-size: 1.3em;
@@ -145,10 +144,49 @@ audio, video {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical
 	text-align: center;
 }
 #maincta{
-	position: relative;
+	border: black solid 3px;
+	height: 370px;
+	width: 450px;
+	margin: 40px auto;
+	overflow: hidden;
+}
+#maincta li > *{
+	position: absolute;
+}
+.info1, .info2, .info3 {
+    background: #3f7ad6;
+    color: white;
+    height: 95px;
+    padding: 5px;
+    width: 95px;
+    left: -150px;
+    top: 10px;
+}
+.info1{
+	left: -150px;
+    top: 10px;
+    -webkit-transition-duration: 1s;
+}
+.info1.animate-out{
+	left: 500px;
+    -webkit-transition-duration: 1s;
+}
+.info2 {
+    top: 130px;
 }
 
-#registercta{
+.info3 {
+    top: 250px;
+}
+.info1.animate-in, .info2.animate-in, .info3.animate-in {
+    left: 165px;
+    -webkit-transition-duration: 1s;
+}
+.info1.animate-out, .info2.animate-out, .info3.animate-out {
+    left: 500px;
+    -webkit-transition-duration: 1s;
+}
+/*#registercta{
 	z-index: 4;
 	position: absolute;
 	top: 33%;
@@ -159,14 +197,18 @@ audio, video {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical
 	padding: 1.5%;
 	display: none;
 	background-image : -webkit-linear-gradient(top,darkred 0%,brown 100%) ; 
+}*/
+img.windows{
+	float: left;
+	max-width: 98%;
+	padding: 5px;
 }
-
 @media only screen and (max-width: 580px) {
 
 .hidden{display: none;}
 .unhidden{display: block;}
 #logo{
-	width: 40%;
+	width: 50%;
 	margin: 0 auto;
 	float: none;
 }

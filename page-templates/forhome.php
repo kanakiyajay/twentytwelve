@@ -32,12 +32,14 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/home.css" type="text/css">
+        
         <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
     </head>
     <body>
+        <a href="#menuopen" id="menuicon"></a>
         <div class="row" id="megamenu">
             <div class="col span_1_of_1 unhidden">
                 <h2 id="hiddenlogo"><a href="#">Melange</a></h2>
@@ -117,20 +119,60 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <!--<div class="row">
-            <div class="col span_1_of_1" id="maincta">
-                <div id="cta">
-                    <button id="registercta">Register</button>
+        <div class="row">
+            <div class="col span_1_of_1">                
+            <div id="maincta">
+                <ul>
+                    <li>
+                       <div class="info1">
+                            <p>Frame 1</p>
+                        </div> 
+                        <!--<img src="images/default.jpg" class="default animate-in" alt="Deafult Image">-->
+                    </li>
+                    <li>
+                       <div class="info2">
+                            <p>Frame 2</p>
+                        </div> 
+                    </li>
+                    <li>
+                       <div class="info3">
+                            <p>Frame 320</p>
+                        </div> 
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="row">
+            <div class="col span_1_of_3">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="windows">
+            </div>
+            <div class="col span_1_of_3">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="windows">
+            </div>
+            <div class="col span_1_of_3">
+                <div class="subrow">
+                    <div class="col span_1_of_2">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="windows">
+                    </div>
+                    <div class="col span_1_of_2">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="windows">
+                    </div>
                 </div>
-                <div id="thegraphic">
-                    <div class="sigma-expand" id="mouselayer-sigma-1"></div>
+                <div class="subrow">
+                    <div class="col span_1_of_2">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="windows">
+                    </div>
+                    <div class="col span_1_of_2">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="windows">
+                    </div>
                 </div>
             </div>
-        </div>-->
-        <a href="#menuopen" id="menuicon">
-                
-        </a>
+        </div>
+
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/sequence.jquery-min.js"></script>
     </body>
 </html>
 <?php get_footer(); ?>

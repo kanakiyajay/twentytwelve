@@ -17,8 +17,6 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php if (is_front_page()){ ?>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/sigma.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/sigma.fisheye.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mainjs.js"></script>
 <?php } ?>
 <?php wp_footer(); ?>
