@@ -1,4 +1,4 @@
-body,#wpcontent{
+body,#wpcontent,#wpwrap{
 	background: url(images/tiny_grid.png) white;
 }
 #tinymce{

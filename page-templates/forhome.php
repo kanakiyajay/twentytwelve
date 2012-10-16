@@ -31,8 +31,8 @@
         <meta name="viewport" content="width=device-width">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/menu.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/home.css" type="text/css">
-        
         <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>

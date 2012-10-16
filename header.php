@@ -21,7 +21,7 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/home.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/post.css">
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -31,47 +31,75 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-     <div class="row" id="megamenu">
-            <div class="col span_1_of_5">
+        <div class="row" id="megamenu">
+            <div class="col span_1_of_1 unhidden">
+                <h2 id="hiddenlogo"><a href="#">Melange</a></h2>
+            </div>
+            <div class="col span_1_of_5 hidden">
+                <div class="menutag" >
+                    <a href="#" >MELange</a>
+                </div>
                 <div id="menuimage"></div>
-                <div id="menudescription"></div>
+                <div id="menudescription">
+                    The hovered Menu Items Description here
+                </div>
             </div>
             <div class="col span_1_of_5">
                 <div class="menutag">
-                    Electronics
+                    <a href="#">Electronics</a>
                 </div>
                 <ul>
-                    <li>Microcontroller
-                    </li>
+                    <li><a href="#">Microcontroller</a></li>
+                    <li><a href="#">PCB Designing</a></li>
+                    <li><a href="#">Circuit Debugging</a></li>
+                    <li><a href="#">Network Treasure Hunt</a></li>
+                    <li><a href="#">Signals & Systems</a></li>
                 </ul>
             </div>
             <div class="col span_1_of_5">
                 <div class="menutag">
-                    Computer
+                    <a href="#">Computer</a>
                 </div>
+                <ul>
+                    <li><a href="#">Microcontroller</a></li>
+                    <li><a href="#">PCB Designing</a></li>
+                    <li><a href="#">Circuit Debugging</a></li>
+                    <li><a href="#">Network Treasure Hunt</a></li>
+                    <li><a href="#">Signals & Systems</a></li>
+                </ul>
             </div>
             <div class="col span_1_of_5">
                 <div class="menutag">
-                    Chemical
+                    <a href="#">Chemical</a>
                 </div>
+                <ul>
+                    <li><a href="#">Microcontroller</a></li>
+                    <li><a href="#">PCB Designing</a></li>
+                    <li><a href="#">Circuit Debugging</a></li>
+                    <li><a href="#">Network Treasure Hunt</a></li>
+                    <li><a href="#">Signals & Systems</a></li>
+                </ul>
             </div>
             <div class="col span_1_of_5">
                 <div class="menutag">
-                    Cultural
+                    <a href="#">Cultural</a>
                 </div>
+                <ul>
+                    <li><a href="#">Microcontroller</a></li>
+                    <li><a href="#">PCB Designing</a></li>
+                    <li><a href="#">Circuit Debugging</a></li>
+                    <li><a href="#">Network Treasure Hunt</a></li>
+                    <li><a href="#">Signals & Systems</a></li>
+                </ul>
             </div>
             <div class="clearfix"></div>
         </div>
+<div id="page" class="hfeed site">
+     <a href="#menuopen" id="menuicon"></a>
         <div class="row" id="logowrapper">
             <div class="col span_2_of_5"></div>
             <div class="col span_1_of_5" id="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/melange.png" alt="melange">
-            </div>
-            <div class="col span_2_of_5" id="menuicon">
-                <h3>
-                    More
-                </h3>
             </div>
             <div class="clearfix"></div>
         </div>

@@ -3,7 +3,7 @@
  *
  * Handles toggling the navigation menu for small screens.
  */
-( function() {
+/*( function() {
 	var button = document.getElementById( 'site-navigation' ).getElementsByTagName( 'h3' )[0],
 	    menu   = document.getElementById( 'site-navigation' ).getElementsByTagName( 'ul' )[0];
 
@@ -28,4 +28,4 @@
 			menu.className += ' toggled-on';
 		}
 	};
-} )();
+} )();*/
