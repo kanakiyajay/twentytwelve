@@ -22,6 +22,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/post.css">
+<?php if(is_front_page()) { ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/home.css">
+<?php } ?>
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -31,6 +34,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <a href="#menuopen" id="menuicon"></a>
         <div class="row" id="megamenu">
             <div class="col span_1_of_1 unhidden">
                 <h2 id="hiddenlogo"><a href="#">Melange</a></h2>
@@ -95,9 +99,9 @@
             <div class="clearfix"></div>
         </div>
 <div id="page" class="hfeed site">
-     <a href="#menuopen" id="menuicon"></a>
+     
         <div class="row" id="logowrapper">
-            <div class="col span_2_of_5"></div>
+            <div class="col span_2_of_5 hidden"></div>
             <div class="col span_1_of_5" id="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/melange.png" alt="melange">
             </div>
