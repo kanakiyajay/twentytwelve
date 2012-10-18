@@ -5,13 +5,9 @@ jQuery(document).ready(function ($) {
   var options = {
 
     autoPlay : true,
-    autoPlayDelay : 300,
-    transitionThreshold : 250,
+    autoPlayDelay : 100,
     animateStartingFrameIn: true,
-    preloadTheseFrames: [1],
-    preloadTheseImages: [
-          "../images/placeholder.png"
-        ]
+    preloadTheseFrames: [1]
 
   }
   var sequence = $("#maincta").sequence().data("sequence");

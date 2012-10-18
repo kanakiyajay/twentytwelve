@@ -21,26 +21,24 @@ get_header(); ?>
             <img class="prev" src="<?php echo get_template_directory_uri(); ?>/images/bt-prev.png" alt="Previous Frame" />
             <img class="next" src="<?php echo get_template_directory_uri(); ?>/images/bt-next.png" alt="Next Frame" />
                 <ul>
-                    <li>
-                       <div class="info1">
-                            <h2 class="sl-title">The First Frame</h2>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="sl-image">
-                            <p>Description 1</p>
+                    <li id="slide1">
+                       <div class="info1 insideslide">        
+                            <h2>25,000 Footfalls<br>
+                                10,000 Participants
+                            </h2>
                         </div> 
                         <!--<img src="images/default.jpg" class="default animate-in" alt="Deafult Image">-->
                     </li>
-                    <li>
-                       <div class="info2">
-                        <h2 class="sl-title">The Second Frame</h2>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="sl-image">
-                            <p>Description 2</p>
+                    <li id="slide2">
+                       <div class="info2 insideslide">                     
+                            
+                            <h2>53 Events <br> 1 Lakh Rupees prizes</h2>
                         </div> 
                     </li>
-                    <li>
-                       <div class="info3">
-                            <h2 class="sl-title">The Third Frame</h2>
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.png" alt="" class="sl-image">
-                            <p>Description 3</p>
+                    <li id="slide3">
+                       <div class="info3 insideslide">                          
+                            
+                            <h2>Description 3</h2>
                         </div> 
                     </li>
                 </ul>

@@ -3,15 +3,16 @@ body{
 }
 #maincta{
 	margin: 40px auto;
-	max-width: 1280px;
-	width: 95%;
-	height: 340px;
+	max-width: 1300px;
+	width: 100%;
+	height: 35em;
 	overflow: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
+	background-color: orange;
 }
 #maincta li > *{
 	position: absolute;
@@ -28,100 +29,28 @@ body{
 	height: 75px;
 	margin-top: -47.5px;
 }
-.sl-title{
 
-	font-size: 3.4em;
-	left: 65%;
-	width: 35%;
-	opacity: 0;
-	bottom: 1%;
-	z-index: 50;
+.insideslide h2{
+	font-size: 2.5em;
+	color: white;
+	width: 60%;
 }
-.sl-title.animate-in {
-	left: 50%;
-	opacity: 1;
-
-	-webkit-transition-duration: .5s;
-	-moz-transition-duration: .5s;
-	-o-transition-duration: .5s;
-	-ms-transition-duration: .5s;
-	transition-duration: .5s;
-}
-
-.sl-title.animate-out {
-	left: 35%;
-	opacity: 0;
-
-	-webkit-transition-duration: .5s;
-	-moz-transition-duration: .5s;
-	-o-transition-duration: .5s;
-	-ms-transition-duration: .5s;
-	transition-duration: .5s;
-}
-.sl-image {
-	left: 30%;
-	bottom: -48%;
-	opacity: 0;
-	position: relative;
-	height: auto !important;
-	max-height: 568px !important;
-	width: 30%;
-	min-width: 225px; /*prevents the sl-image from shrinking when the browser is resized*/
-	max-width: 266px;
-}
-
-.sl-image.animate-in {
-	left: 15%;
-	opacity: 1;
-
-	-webkit-transition-duration: 1s;
-	-moz-transition-duration: 1s;
-	-o-transition-duration: 1s;
-	-ms-transition-duration: 1s;
-	transition-duration: 1s;
-}
-
-.sl-image.animate-out {
-	left: 15%;
-	opacity: 0;
-
-	-webkit-transition-duration: .5s;
-	-moz-transition-duration: .5s;
-	-o-transition-duration: .5s;
-	-ms-transition-duration: .5s;
-	transition-duration: .5s;
-}
-.info1, .info2, .info3 {
-    background: #3f7ad6;
+.insideslide{    
     color: white;
     height: 95px;
     padding: 5px;
-    width: 95px;
-    left: -150px;
-    top: 10px;
-}
-.info1{
-	left: -150px;
-    top: 10px;
-    -webkit-transition-duration: 1s;
-}
-.info1.animate-out{
-	left: 500px;
-    -webkit-transition-duration: 1s;
-}
-.info2 {
-    top: 130px;
-}
-
-.info3 {
-    top: 250px;
+    width: 100%;
+    left: -20%;
+    top: 50%;
 }
 .info1.animate-in, .info2.animate-in, .info3.animate-in {
-    left: 165px;
+    
+    left: 50%;
     -webkit-transition-duration: 1s;
 }
 .info1.animate-out, .info2.animate-out, .info3.animate-out {
-    left: 500px;
+    left: 100%;
+    
     -webkit-transition-duration: 1s;
 }
 /*#registercta{
@@ -142,4 +71,11 @@ img.windows{
 	padding: 5px;
 	background-color: lightgreen;
 }
+@media only screen and (max-width: 580px) {
 
+.insideslide h2{
+	width: 90%;
+	font-size: 1.2em;
+}
+
+}

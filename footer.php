@@ -10,7 +10,9 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+	<?php if (!is_front_page()) {?>
 	</div><!-- #main .wrapper -->
+	<?php } ?>
 	<footer id="colophon" role="contentinfo">
 		<div class="site-info">
 		</div><!-- .site-info -->
