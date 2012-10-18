@@ -34,7 +34,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <a href="#menuopen" id="menuicon"></a>
+    <a id="menuicon"></a>
         <div class="row" id="megamenu">
             <div class="col span_1_of_1 unhidden">
                 <h2 id="hiddenlogo"><a href="#">Melange</a></h2>

@@ -1,18 +1,25 @@
 body{
 	overflow-x: hidden;
 }
+#s-wrapper{
+float: none;
+height: 35em;
+margin: 40px auto;
+position: relative;
+max-width: 1300px;
+background-color: orange;
+}
 #maincta{
-	margin: 40px auto;
+	margin: 0 auto;
 	max-width: 1300px;
-	width: 100%;
-	height: 35em;
+	width: 100%;height: 100%;
 	overflow: hidden;
+	position: absolute;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
-	background-color: orange;
 }
 #maincta li > *{
 	position: absolute;
@@ -31,16 +38,16 @@ body{
 }
 
 .insideslide h2{
-	font-size: 2.5em;
+	font-size: 2.7em;
 	color: white;
-	width: 60%;
+	width: 65%;
 }
 .insideslide{    
     color: white;
     height: 95px;
     padding: 5px;
     width: 100%;
-    left: -20%;
+    left: -50%;
     top: 50%;
 }
 .info1.animate-in, .info2.animate-in, .info3.animate-in {
@@ -53,7 +60,7 @@ body{
     
     -webkit-transition-duration: 1s;
 }
-/*#registercta{
+#registercta{
 	z-index: 4;
 	position: absolute;
 	top: 33%;
@@ -64,18 +71,27 @@ body{
 	padding: 1.5%;
 	display: none;
 	background-image : -webkit-linear-gradient(top,darkred 0%,brown 100%) ; 
-}*/
+}
 img.windows{
 	float: left;
 	max-width: 98%;
 	padding: 5px;
 	background-color: lightgreen;
 }
+@media only screen and (max-width: 900px) {
+	
+}
 @media only screen and (max-width: 580px) {
 
 .insideslide h2{
 	width: 90%;
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
-
+#maincta{
+	height: 25em;
+	margin: 10px auto;
+}
+.info1.animate-in, .info2.animate-in, .info3.animate-in{
+	left: 10%;
+}
 }

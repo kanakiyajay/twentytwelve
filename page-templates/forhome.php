@@ -14,12 +14,12 @@
  * @since Twenty Twelve 1.0
  */
 get_header(); ?>
-        <div class="clearfix"></div>
         <div class="row">
-            <div class="col span_1_of_1">                
-            <div id="maincta">
+            <div class="col span_1_of_1" id="s-wrapper">                
+            <div id="registercta">Register</div>
             <img class="prev" src="<?php echo get_template_directory_uri(); ?>/images/bt-prev.png" alt="Previous Frame" />
             <img class="next" src="<?php echo get_template_directory_uri(); ?>/images/bt-next.png" alt="Next Frame" />
+            <div id="maincta">
                 <ul>
                     <li id="slide1">
                        <div class="info1 insideslide">        
