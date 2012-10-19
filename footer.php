@@ -12,12 +12,12 @@
 ?>
 	<?php if (!is_front_page()) {?>
 	</div><!-- #main .wrapper -->
-	<?php } ?>
-	<footer id="colophon" role="contentinfo">
+	<!--<footer id="colophon" role="contentinfo">
 		<div class="site-info">
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		</div><! .site-info -->
+	</footer> #colophon -->
 </div><!-- #page -->
+<?php } ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 <?php if (is_front_page()){ ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mainjs.js"></script>

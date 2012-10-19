@@ -61,6 +61,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 body {
 	line-height: 1;
+	background: url(images/tiny_grid.png);
 }
 ol,
 ul {
@@ -474,8 +475,8 @@ a:hover {
 	background-color: #fff;
 }
 .site-content {
-	margin: 24px 0 0;
-	margin: 1.714285714rem 0 0;
+	/*margin: 24px 0 0;
+	margin: 1.714285714rem 0 0;*/
 }
 .widget-area {
 	margin: 24px 0 0;
@@ -702,6 +703,7 @@ article.sticky .featured-post {
 	font-size: 18px;
 	font-size: 1.285714286rem;
 	line-height: 1.6;
+	font-weight: normal;
 }
 .entry-content h3,
 .comment-content h3 {
@@ -1364,10 +1366,8 @@ img#wpstats {
 	}
 	.site {
 		margin: 0 auto;
-		/*max-width: 960px;
-		max-width: 68.571428571rem;*/
-		width: 98%;
-		margin: 0 1%;
+		max-width: 1113px;
+		max-width: 79.571428571rem;
 		overflow: hidden;
 	}
 	.site-content {

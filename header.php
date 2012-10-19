@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/post.css">
 <?php if(is_front_page()) { ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/home.css">
+<?php } else {?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/single.css">
 <?php } ?>
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
@@ -34,7 +36,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <a id="menuicon"></a>
+    <div id="menuicon"></div>
         <div class="row" id="megamenu">
             <div class="col span_1_of_1 unhidden">
                 <h2 id="hiddenlogo"><a href="#">Melange</a></h2>
@@ -98,16 +100,17 @@
             </div>
             <div class="clearfix"></div>
         </div>
-<div id="page" class="hfeed site">
-     
-        <div class="row" id="logowrapper">
+<?php if(!is_front_page()) {?>
+<div id="page" class="hfeed site"> 
+    <?php } ?>
+        <div class="row bg" id="logowrapper">
             <div class="col span_2_of_5 hidden"></div>
             <div class="col span_1_of_5" id="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/melange.png" alt="melange">
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="row">
+        <div class="row bg">
             <div class="col span_1_of_1" id="logotext">
                 <h3>
                     13th Feb
@@ -132,6 +135,6 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 		<?php endif; ?>
 	</header> #masthead -->
-<?php if (!is_front_page()) {  ?> 
+<?php if (is_front_page()) {  } else {?> 
     <div id="main" class="wrapper">
 <?php } ?>

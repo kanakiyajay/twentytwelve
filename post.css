@@ -22,7 +22,7 @@
 
 #logowrapper{
    height:90px;
-   margin-top: 5px;
+   padding-top: 5px;
 }
 
 .clearfix{clear: both;}
@@ -33,7 +33,7 @@
 }
 
 #menuicon{
-	position: fixed;
+	position: absolute;
 	display: block;
 	right: 0;
 	top: 0;
@@ -72,10 +72,10 @@
 	height: 70px;
 }
 #menudescription{
-	font-size: 0.8em;
+	font-size: 1.1em;
 	width: 140px;
 	margin: 0 auto;
-	padding-top: 7px;
+	padding-top: 1em;
 	color: black;
 }
 #megamenu .menutag{
@@ -87,13 +87,12 @@
 	background: -o-linear-gradient(top,rgba(203, 113, 3, 1) 25%,rgba(227, 125, 17, 1) 100%);
 }
 #megamenu ul{
-	background: rgba(231, 144, 13, 0.7);
 	color: whitesmoke;
 	-webkit-transition : all 0.5s ease-out;	
 }
 .menutag a{
 	font-weight: bold;
-	font-size: 1em;
+	font-size: 1.5em;
 	width: 100%;
 	color: whitesmoke;
 	position: absolute;
@@ -103,20 +102,21 @@
 	text-transform: uppercase;
 }
 #megamenu li{
-	line-height: 1.45;
+	line-height: 2;
 	color: white;
 	-webkit-transition:0.5s ease-in;
+	width: 80%;
 }
 #megamenu li:first-child{
-	padding-top: 8px;
+	margin-top: 1em;
 }
 #megamenu li:hover{
-	line-height: 1.45;
+	padding-left: 5%;
 	background-color: white;
 	color: black;
 }
 #megamenu li a{
-	font-size: 0.87em;
+	font-size: 1em;
 	color: inherit;
 }
 #logo img{
@@ -126,7 +126,8 @@
 	text-align: center;
 }
 @media only screen and (max-width: 580px) {
-
+.row{width: 90%;margin: 0 auto}
+#megamenu{width: 100%;}
 .hidden{display: none;}
 .unhidden{display: block;}
 #logo{

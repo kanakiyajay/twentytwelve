@@ -79,7 +79,9 @@ img.windows{
 	background-color: lightgreen;
 }
 @media only screen and (max-width: 900px) {
-	
+	#s-wrapper{
+		height: 24em;
+	}
 }
 @media only screen and (max-width: 580px) {
 
@@ -87,9 +89,8 @@ img.windows{
 	width: 90%;
 	font-size: 1.5em;
 }
-#maincta{
-	height: 25em;
-	margin: 10px auto;
+#s-wrapper{
+	height: 20em;
 }
 .info1.animate-in, .info2.animate-in, .info3.animate-in{
 	left: 10%;
