@@ -38,6 +38,7 @@
 <body <?php body_class(); ?>>
     <div id="menuicon"></div>
         <div class="row" id="megamenu">
+            <?php $theurl =  get_site_url();  ?>
             <div class="col span_1_of_1 unhidden">
                 <h2 id="hiddenlogo"><a href="#">Melange</a></h2>
             </div>
@@ -88,13 +89,13 @@
             </div>
             <div class="col span_1_of_5">
                 <div class="menutag">
-                    <a href="#">Cultural</a>
+                    <a href="#">Others</a>
                 </div>
                 <ul>
-                    <li><a href="#">Microcontroller</a></li>
-                    <li><a href="#">PCB Designing</a></li>
-                    <li><a href="#">Circuit Debugging</a></li>
-                    <li><a href="#">Network Treasure Hunt</a></li>
+                    <li><a href="<?php  echo $theurl ?>/sponsors">Sponsors</a></li>
+                    <li><a href="<?php  echo $theurl ?>/register">Register</a></li>
+                    <li><a href="<?php  echo $theurl ?>/cybernetics/browser-x">Browser-X</a></li>
+                    <li><a href="<?php  echo $theurl ?>/electronics-e-tc-department/microcontroller">Microcontroller</a></li>
                     <li><a href="#">Signals & Systems</a></li>
                 </ul>
             </div>
