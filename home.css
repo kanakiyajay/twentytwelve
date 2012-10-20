@@ -23,43 +23,56 @@ background-color: orange;
 }
 #maincta li > *{
 	position: absolute;
+	-webkit-transform:translateZ(0)
 }
 .next,.prev {
 	color: black;
 	cursor: pointer;
-	display: none;
 	font-weight: bold;
 	padding: 10px 15px;
 	position: absolute;
 	top: 50%;
 	z-index: 1000;
 	height: 75px;
-	margin-top: -47.5px;
 }
-
-.insideslide h2{
-	font-size: 2.7em;
+.next{
+	right: 0;
+}
+#maincta h2{
+	font-size: 3.4em;
 	color: white;
 	width: 65%;
+	font-weight: normal;
 }
-.insideslide{    
-    color: white;
-    height: 95px;
-    padding: 5px;
-    width: 100%;
-    left: -50%;
+.title1{
+    left: -100%;
     top: 50%;
+-webkit-transition-duration: 0.5s;
 }
-.info1.animate-in, .info2.animate-in, .info3.animate-in {
-    
+.title2{
+	left: -100%;
+    	top: 80%;
+	-webkit-transition-duration: 1s;
+}
+.title1.animate-in{    
     left: 50%;
-    -webkit-transition-duration: 1s;
 }
-.info1.animate-out, .info2.animate-out, .info3.animate-out {
-    left: 100%;
-    
-    -webkit-transition-duration: 1s;
+.title2.animate-in{    
+    left: 50%;
 }
+
+.title1.animate-out{
+    left: 100%;    
+    -webkit-transition-duration: 0.5s;
+}
+.title2.animate-out{
+    left: 100%;    
+    -webkit-transition-delay:0.5s
+    -webkit-transition-duration: 0.2s;
+}
+.flash1{-webkit-transition-duration: 0.3s;}
+.flash2{-webkit-transition-duration: 0.8s;}
+.flash3{-webkit-transition-duration: 1.2s;}
 #registercta{
 	z-index: 4;
 	position: absolute;
@@ -69,7 +82,6 @@ background-color: orange;
 	color: white;
 	font-size: 1.6em;
 	padding: 1.5%;
-	display: none;
 	background-image : -webkit-linear-gradient(top,darkred 0%,brown 100%) ; 
 }
 img.windows{
