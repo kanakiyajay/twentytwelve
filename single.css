@@ -1,4 +1,4 @@
-.bg,#primary{
+.bg,#primary,#main{
 	background: url(images/tiny_grid.png);
 }
 .bg:nth-child(2){
@@ -8,6 +8,9 @@
 	margin: 3%;
 	background-color: white;
 	-webkit-box-shadow: 0px 0px 4px #818080;
+}
+#comments{
+	display: none;
 }
 .entry-title{
 	position:relative;
@@ -50,6 +53,41 @@
 .entry-content{
 	padding: 3%;
 }
+.span_1_of_4{width: 22.88%}
+#customfields{
+	width: 90%;
+	float: none;
+	margin: 0 auto;
+	padding: 32px 0;
+}
+#customfields .col{
+	padding: 1%;
+}
+#customfields .col,.col a,.col a:visited{
+	color: white;
+	text-align: center;
+}
+#customfields p{
+	line-height: 2.3
+}
+#register{
+	background-color: green;
+}
+#pdf{
+	background-color: red;
+}
+#entryfee{
+	background-color: blue;
+}
+#eventhead{
+	background-color: black;
+}
 #disqus_thread{
 	padding: 2% !important;
+}
+@media only screen and (max-width: 580px) {
+	.span_1_of_4{
+		width: 45.76%;
+		padding: 3%;
+	}
 }

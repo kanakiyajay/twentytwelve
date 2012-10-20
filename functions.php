@@ -459,11 +459,9 @@ function wpc_dashboard_widgets(){
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 }
-add_action('wp_dashboard_setup','wpc_dashboard_widgets');
 function new_admin_head(){
 	echo '<link rel="stylesheet" type="text/css" href="' .content_url('themes/twentytwelve/new-admin.css', __FILE__). '">';
 }
-add_action('admin_head', 'new_admin_head');
 function xyz_filter_up_mail_from($email){
 	$sitename = strtolower($_SERVER['SERVER_NAME']);
 	if (substr($sitename, 0,4)=='www.') {
@@ -478,5 +476,16 @@ function new_mail_from_name($old)
 {
 	return 'Melange';
 }
+add_action('wp_dashboard_setup','wpc_dashboard_widgets');
+add_action('admin_head', 'new_admin_head');
 add_filter("wp_mail_from","xyz_filter_up_mail_from");
 add_filter("wp_mail_from_name","new_mail_from_name");
+add_filter('user_contactmethods', 'my_user_contactmethods');
+function my_user_contactmethods($user_contactmethods){
+  unset($user_contactmethods['yim']);
+  unset($user_contactmethods['aim']);
+  unset($user_contactmethods['jabber']);
+  unset($user_contactmethods['website']);
+  $user_contactmethods['number'] = 'Mobile Number';
+   return $user_contactmethods;
+}

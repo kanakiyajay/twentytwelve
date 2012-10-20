@@ -3,7 +3,7 @@
 ::-webkit-scrollbar{width:5px;height:8px}
 ::-webkit-scrollbar-track{background:lightyellow;}
 ::-webkit-scrollbar-thumb{background:darkred;}
-.row,.subrow{width: 100%;}
+.row,.subrow{width: 100%;overflow-x:hidden }
 .subrow{height: 50%;}
 .col {float:left;height:100%;}
 .unhidden{display: none;}
@@ -23,8 +23,14 @@
 #logowrapper{
    height:90px;
    padding-top: 5px;
+    display: table;
+   width: 100%;
 }
-
+#logo{
+	display: table-cell;
+   text-align: center;
+   vertical-align: middle;
+}
 .clearfix{clear: both;}
 #hiddenlogo {
 	font-size: 1.3em;
@@ -119,22 +125,16 @@
 	font-size: 1em;
 	color: inherit;
 }
-#logo img{
-	float: left;
-}
+
 #logotext{
 	text-align: center;
 }
 @media only screen and (max-width: 580px) {
-.row{width: 90%;margin: 0 auto}
+
 #megamenu{width: 100%;}
 .hidden{display: none;}
 .unhidden{display: block;}
-#logo{
-	width: 77%;
-	margin: 0 auto;
-	float: none;
-}
+
 .span_1_of_5,.span_1_of_3{ 
 	width : 100%;
 }

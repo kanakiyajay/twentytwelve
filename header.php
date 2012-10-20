@@ -104,9 +104,8 @@
 <div id="page" class="hfeed site"> 
     <?php } ?>
         <div class="row bg" id="logowrapper">
-            <div class="col span_2_of_5 hidden"></div>
-            <div class="col span_1_of_5" id="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/melange.png" alt="melange">
+            <div class="col span_1_of_1" id="logo">
+                <a href="http://vitmelange.com"> <img src="<?php echo get_template_directory_uri(); ?>/images/melange.png" alt="melange"></a>
             </div>
             <div class="clearfix"></div>
         </div>

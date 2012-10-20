@@ -1,0 +1,13 @@
+.author { 
+	margin: 2%;
+	padding: 2%;
+	width: 33.333%;
+	float: left;
+}
+.author h3 { margin-bottom: 10px; }
+.author .description { width: 100%; overflow: hidden; }
+.author .description p { width: 75%; float: left; margin: 0; }
+.author .avatar { float: right; border: 5px solid #ccc; }
+.author h4 { background: #E7E7E7; padding: 5px; border: 1px dotted #ccc; }
+.author .connect { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; list-style: none; margin: 0; padding: 0; width: 100%; overflow: hidden; padding: 10px 0px; }
+.author .connect li { float: left; margin-right: 20px; }

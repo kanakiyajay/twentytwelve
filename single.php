@@ -13,7 +13,37 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', get_post_format() ); ?>
-
+				<div class="row" id="customfields">
+					<div class="col span_1_of_4" id="register">
+					<a href="<?php get_site_url(); ?>/register">	<p>Register <br> For this <?php the_title(); ?></p></a>
+					</div>
+					<div class="col span_1_of_4" id="entryfee">
+					<a href="#"><p>Entry Fee <br>
+						<?php 
+							$entryfee = get_post_meta($post->ID, 'entryfee', true);
+							// check if the custum field has a value
+							if($entryfee != '') {
+						  	echo $entryfee;
+							} 
+						?>
+						</p></a>
+					</div>
+					<div class="unhidden clear"></div>
+					<div class="col span_1_of_4" id="pdf">
+						<?php $pdf = get_post_meta($post->ID, 'pdf', true); ?>
+						<a href="<?php get_site_url(); ?>/pdf/<?php $pdf ?>">
+							<p>Download Pdf Problem-Statement</p>
+						</a>
+					</div>
+					<div class="col span_1_of_4" id="eventhead">
+						<a href="#"><p>Event Head : <?php echo get_the_author_meta('display_name'); ?><br>
+							<?php $number = get_the_author_meta('number'); 
+							echo $number;
+							?>
+							</p></a>
+					</div>
+					<div class="clear"></div>
+				</div>
 				<!--<nav class="nav-single">
 					<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
 					<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?></span>
