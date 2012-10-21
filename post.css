@@ -3,7 +3,7 @@
 ::-webkit-scrollbar{width:5px;height:8px}
 ::-webkit-scrollbar-track{background:lightyellow;}
 ::-webkit-scrollbar-thumb{background:darkred;}
-.row,.subrow{width: 100%;overflow-x:hidden }
+.row,.subrow{width: 98%;overflow-x:hidden ;margin: 0 auto}
 .subrow{height: 50%;}
 .col {float:left;height:100%;}
 .unhidden{display: none;}

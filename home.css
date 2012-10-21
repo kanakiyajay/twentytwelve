@@ -44,6 +44,18 @@ background-color: orange;
 	width: 65%;
 	font-weight: normal;
 }
+
+#slide1 h2{
+	top: -50%;
+}
+#slide1 h2.animate-in  {top: 60%;}
+#slide1 h2.animate-out {top: 80%;}
+.flash1.animate-in{-webkit-transition-duration: 0.3s;left: 10%;}
+.flash1.animate-out{-webkit-transition-duration:1.2s;left: 100%;}
+.flash2.animate-in{-webkit-transition-duration: 0.8s;left: 45%;}
+.flash2.animate-out{-webkit-transition-duration:0.8s;left: 100%;}
+.flash3.animate-in{-webkit-transition-duration: 1.2s;left: 70%;}
+.flash3.animate-out{-webkit-transition-duration:0.3s;left: 100%;}
 .title1{
     left: -100%;
     top: 50%;
@@ -56,24 +68,24 @@ background-color: orange;
 }
 .title1.animate-in{    
     left: 50%;
+    -webkit-transition-duration: 0.6s;
 }
 .title2.animate-in{    
     left: 50%;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-delay:0.5s;    
 }
 
 .title1.animate-out{
     left: 100%;    
-    -webkit-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.8s;
 }
 .title2.animate-out{
     left: 100%;    
-    -webkit-transition-delay:0.5s
+    -webkit-transition-delay:0.5s;
     -webkit-transition-duration: 0.2s;
 }
-.flash1{-webkit-transition-duration: 0.3s;}
-.flash2{-webkit-transition-duration: 0.8s;}
-.flash3{-webkit-transition-duration: 1.2s;}
-#registercta{
+/*#registercta{
 	z-index: 4;
 	position: absolute;
 	top: 33%;
@@ -83,12 +95,17 @@ background-color: orange;
 	font-size: 1.6em;
 	padding: 1.5%;
 	background-image : -webkit-linear-gradient(top,darkred 0%,brown 100%) ; 
-}
-img.windows{
+}*/
+.events{
 	float: left;
-	max-width: 98%;
-	padding: 5px;
-	background-color: lightgreen;
+}
+.small{	
+	width: 200px;
+	height: 200px;
+}
+.big{
+	width: 400px;
+	height: 400px;
 }
 @media only screen and (max-width: 900px) {
 	#s-wrapper{
@@ -97,14 +114,14 @@ img.windows{
 }
 @media only screen and (max-width: 580px) {
 
-.insideslide h2{
+#maincta h2{
 	width: 90%;
 	font-size: 1.5em;
 }
 #s-wrapper{
 	height: 20em;
 }
-.info1.animate-in, .info2.animate-in, .info3.animate-in{
+h2.animate-in{
 	left: 10%;
 }
 }
