@@ -51,54 +51,12 @@
                     The hovered Menu Items Description here
                 </div>
             </div>
-            <div class="col span_1_of_5">
-                <div class="menutag">
-                    <a href="#">Electronics</a>
-                </div>
-                <ul>
-                    <li><a href="#">Microcontroller</a></li>
-                    <li><a href="#">PCB Designing</a></li>
-                    <li><a href="#">Circuit Debugging</a></li>
-                    <li><a href="#">Network Treasure Hunt</a></li>
-                    <li><a href="#">Signals & Systems</a></li>
-                </ul>
-            </div>
-            <div class="col span_1_of_5">
-                <div class="menutag">
-                    <a href="#">Computer</a>
-                </div>
-                <ul>
-                    <li><a href="#">Microcontroller</a></li>
-                    <li><a href="#">PCB Designing</a></li>
-                    <li><a href="#">Circuit Debugging</a></li>
-                    <li><a href="#">Network Treasure Hunt</a></li>
-                    <li><a href="#">Signals & Systems</a></li>
-                </ul>
-            </div>
-            <div class="col span_1_of_5">
-                <div class="menutag">
-                    <a href="#">Chemical</a>
-                </div>
-                <ul>
-                    <li><a href="#">Microcontroller</a></li>
-                    <li><a href="#">PCB Designing</a></li>
-                    <li><a href="#">Circuit Debugging</a></li>
-                    <li><a href="#">Network Treasure Hunt</a></li>
-                    <li><a href="#">Signals & Systems</a></li>
-                </ul>
-            </div>
-            <div class="col span_1_of_5">
-                <div class="menutag">
-                    <a href="#">Others</a>
-                </div>
-                <ul>
-                    <li><a href="<?php  echo $theurl ?>/sponsors">Sponsors</a></li>
-                    <li><a href="<?php  echo $theurl ?>/register">Register</a></li>
-                    <li><a href="<?php  echo $theurl ?>/cybernetics/browser-x">Browser-X</a></li>
-                    <li><a href="<?php  echo $theurl ?>/electronics-e-tc-department/microcontroller">Microcontroller</a></li>
-                    <li><a href="#">Signals & Systems</a></li>
-                </ul>
-            </div>
+           <?php $defaults = array(
+                    'theme_location' => 'primary', 
+                    'menu-class'=>'nav-menu',
+                    'container_id'=>'ulmenu'
+                    ); ?>
+            <?php wp_nav_menu( $defaults ); ?>
             <div class="clearfix"></div>
         </div>
 <?php if(!is_front_page()) {?>
@@ -116,6 +74,7 @@
                     13th Feb
                 </h3>
             </div>
+            
             <div class="clearfix"></div>
         </div>
 	<!--<header id="masthead" class="site-header" role="banner">

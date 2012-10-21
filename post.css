@@ -64,6 +64,7 @@
 	z-index: 100;
 	background: -webkit-gradient(linear,left top,left bottom,color-stop(0.25, rgba(203, 113, 3, 1)),color-stop(1.0, rgba(227, 125, 17, 1)));
 	overflow: hidden;
+	width: 100%;
 	display: none;
 }
 .hidden>.menutag{
@@ -84,45 +85,41 @@
 	padding-top: 1em;
 	color: black;
 }
-#megamenu .menutag{
-	padding-bottom: 4px;
-	position: relative;
-	height: 14px;
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0.25, rgba(227, 125, 17, 1)),color-stop(1.0, rgba(203, 113, 3, 1)));
-	background: -moz-linear-gradient(center top,rgba(203, 113, 3, 1),rgba(227, 125, 17, 1));
-	background: -o-linear-gradient(top,rgba(203, 113, 3, 1) 25%,rgba(227, 125, 17, 1) 100%);
-}
-#megamenu ul{
-	color: whitesmoke;
-	-webkit-transition : all 0.5s ease-out;	
-}
-.menutag a{
-	font-size: 1.45em;
-	width: 100%;
-	color: whitesmoke;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 2%;left: 2%;
-	text-transform: uppercase;
-}
-#megamenu li{
-	line-height: 2;
-	color: white;
-	-webkit-transition:0.5s ease-in;
+#ulmenu{
+	-webkit-transition : all 0.5s ease-out;
+	float: left;
 	width: 80%;
 }
-#megamenu li:first-child{
-	margin-top: 1em;
+#menu-melange>li{
+	width: 20%;
+	float: left;
 }
-#megamenu li:hover{
+#menu-melange>li>a{
+	text-transform: uppercase;
+	font-size: 1.2em;
+	color: white;
+	display: block;
+	width: 100%;
+	padding: 1%;
+}
+.sub-menu{
+	margin-top: 6%;
+}
+.sub-menu li{
+	line-height: 2;
+	-webkit-transition:0.5s ease-in;
+	display: block;
+	width: 80%;
+}
+.sub-menu li a:hover{
 	padding-left: 5%;
 	background-color: white;
 	color: black;
 }
-#megamenu li a{
-	font-size: 1em;
-	color: inherit;
+.sub-menu li a{
+	display: block;
+	width: 100%;
+	color: white
 }
 
 #logotext{
@@ -134,11 +131,12 @@
 .hidden{display: none;}
 .unhidden{display: block;}
 
-.span_1_of_5,.span_1_of_3{ 
+.span_1_of_5,.span_1_of_3,#ulmenu{ 
 	width : 100%;
 }
-#megamenu .menutag{
-
+.span_2_of_5{ width : 100%;}
+#menu-melange>li{
+	width: 100%;
 	padding: 10px 0 ;
 	border-top: 1px solid white;
 	border-bottom: 1px solid darkgray;
@@ -146,15 +144,12 @@
 	background: url(images/arrow.png) 97% 50% no-repeat;
 
 }
-.span_2_of_5{ width : 100%;}
 #hiddenlogo{
 	padding: 15px 0;
 	padding-left: 10px;
 }
-#megamenu li{
+.sub-menu li{
 	display: none;
 }
-.menutag a{
-	top: 26%;
-}
+
 }
