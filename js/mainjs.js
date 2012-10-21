@@ -1,6 +1,6 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
   //For the Menu
-  
+  	
  //Sequence Slider
   var options = {
 
@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
     nextButton : true,
     prevButton:true
 
-  }
+  };
   var sequence = $("#maincta").sequence().data("sequence");
   console.log(sequence);
   $('.prev').on('click',function () {
@@ -22,18 +22,20 @@ jQuery(document).ready(function ($) {
   });
 
   //For Masonry
-  $('#masonryrow').masonry({
-    // options
-    itemSelector : '.events',
-    columnWidth : 240
-  });
-
+  var $container = $('#masonryrow');
+  	$container.imagesLoaded(function(){
+	  $container.masonry({
+	    itemSelector : '.events',
+	    columnWidth : 240
+	  });
+  	});
   //For the Hover Effect
 $(".events").hover(
-  function () {
-    mouseenter
-  },
-  function () {
-    mouseleave
-  }
+	  function () {
+	    $(this).addClass('eventhover');
+	  },
+	  function () {
+	    $(this).removeClass('eventhover');
+	  }
 );
+});
