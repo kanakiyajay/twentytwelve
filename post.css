@@ -55,7 +55,9 @@
 	padding: 0;
 	text-indent: -999em;
 }
-
+#menuicon.closer{
+	background: url(images/close.jpg) 50% 50%;
+}
 #megamenu{
 	padding: 0.2% 0%;	
 	background: rgba(231, 144, 13, 0.7);
@@ -96,7 +98,7 @@
 }
 #menu-melange>li>a{
 	text-transform: uppercase;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	color: white;
 	display: block;
 	width: 100%;
@@ -107,28 +109,28 @@
 }
 .sub-menu li{
 	line-height: 2;
-	-webkit-transition:0.5s ease-in;
 	display: block;
 	width: 80%;
 }
-.sub-menu li a:hover{
-	padding-left: 5%;
-	background-color: white;
-	color: black;
-}
 .sub-menu li a{
+	-webkit-transition:0.5s ease-in;
 	display: block;
 	width: 100%;
 	color: white
 }
 
+.sub-menu li a:hover{
+	padding-left: 5%;
+	background-color: white;
+	color: black;
+}
 #logotext{
 	text-align: center;
 }
 @media only screen and (max-width: 580px) {
 
 #megamenu{width: 100%;}
-.hidden{display: none;}
+.hidden,.sub-menu{display: none;}
 .unhidden{display: block;}
 
 .span_1_of_5,.span_1_of_3,#ulmenu{ 

@@ -44,7 +44,7 @@
             </div>
             <div class="col span_1_of_5 hidden">
                 <div class="menutag" >
-                    <a href="#" >MELange</a>
+                    <a href="http://vitmelange.com" >MELANGE</a>
                 </div>
                 <div id="menuimage"></div>
                 <div id="menudescription">
