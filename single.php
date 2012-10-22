@@ -13,6 +13,14 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', get_post_format() ); ?>
+				<div class="row">
+					<div class="col span_1_of_1" id="updates">
+						<?php $updates = get_post_meta($post->ID, 'news', true); 
+						$importance  =  get_post_meta($post->ID,'importance_level',true); ?>
+						<?php echo '<h2>'.$updates.'</h2>';?><br>
+						<?php echo '<h3>'.$importance.'</h3>' ;?> <br>
+					</div>
+				</div>
 				<div class="row" id="customfields">
 					<div class="col span_1_of_4" id="register">
 					<a href="<?php get_site_url(); ?>/register">	<p>Register <br> For this <?php the_title(); ?></p></a>
@@ -20,7 +28,7 @@ get_header(); ?>
 					<div class="col span_1_of_4" id="entryfee">
 					<a href="#"><p>Entry Fee <br>
 						<?php 
-							$entryfee = get_post_meta($post->ID, 'entryfee', true);
+							$entryfee = htmlspecialchars(get_post_meta($post->ID, 'entryfee', true));
 							// check if the custum field has a value
 							if($entryfee != '') {
 						  	echo $entryfee;
@@ -37,7 +45,7 @@ get_header(); ?>
 					</div>
 					<div class="col span_1_of_4" id="eventhead">
 						<a href="#"><p>Event Head : <?php echo get_the_author_meta('display_name'); ?><br>
-							<?php $number = get_the_author_meta('number'); 
+							<?php $number = htmlspecialchars(get_the_author_meta('number')); 
 							echo $number;
 							?>
 							</p></a>
