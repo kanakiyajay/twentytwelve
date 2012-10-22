@@ -13,14 +13,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', get_post_format() ); ?>
-				<div class="row">
-					<div class="col span_1_of_1" id="updates">
-						<?php $updates = get_post_meta($post->ID, 'news', true); 
-						$importance  =  get_post_meta($post->ID,'importance_level',true); ?>
-						<?php echo '<h2>'.$updates.'</h2>';?><br>
-						<?php echo '<h3>'.$importance.'</h3>' ;?> <br>
-					</div>
-				</div>
+				
 				<div class="row" id="customfields">
 					<div class="col span_1_of_4" id="register">
 					<a href="<?php get_site_url(); ?>/register">	<p>Register <br> For this <?php the_title(); ?></p></a>
