@@ -6,4 +6,8 @@ var $j = jQuery.noConflict();
 	     //console.log('menu icon clicked ');
 	     $(this).toggleClass('closer');
 	  });
+	$.fn.setAllToMaxHeight = function(){
+		return this.height( Math.max.apply(this, $.map( this , function(e){ return $(e).height() }) ) );
+	}
+	 $('#customfields .col').setAllToMaxHeight();
 });
