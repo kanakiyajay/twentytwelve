@@ -9,7 +9,12 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-?>
+?>	
+<div class="row">
+	<div class="clear"></div>
+		<footer>Site In Construction by Jay Kanakiya</footer>
+		<div class="clear"></div>
+</div>
 	<?php if (!is_front_page()) {?>
 	</div><!-- #main .wrapper -->
 	<!--<footer id="colophon" role="contentinfo">
@@ -19,9 +24,6 @@
 </div><!-- #page -->
 <?php } ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
-<?php if (is_front_page()){ ?>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mainjs.js"></script>
-<?php } ?>
 <?php wp_footer(); ?>
 </body>
 </html>

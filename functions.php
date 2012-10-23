@@ -97,8 +97,17 @@ function twentytwelve_scripts_styles() {
 
 	/*
 	 * Adds JavaScript for handling the navigation menu hide-and-show behavior.
-	 */
 	wp_enqueue_script( 'twentytwelve-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
+	 */
+	if (is_front_page()) {		
+	wp_enqueue_script('jquery');
+	wp_register_script('jquery_masonry', get_template_directory_uri(). '/js/jquery.masonry.min.js', array('jquery') );
+	wp_register_script('sequence',get_template_directory_uri(). '/js/sequence.jquery-min.js',array('jquery'));
+	wp_enqueue_script('jquery_masonry',array('jquery'));
+	wp_enqueue_script('sequence',array('jquery'));
+	wp_register_script('mainjs',get_template_directory_uri(). '/js/mainjs.js',array('jquery','jquery_masonry','sequence'));
+	wp_enqueue_script('mainjs',array('jquery','jquery_masonry','sequence'));
+	}
 
 	/*
 	 * Loads our special font CSS file.
@@ -413,7 +422,16 @@ function twentytwelve_content_width() {
 	}
 }
 add_action( 'template_redirect', 'twentytwelve_content_width' );
-
+//Making jQuery Google API
+function modify_jquery() {
+	if (!is_admin()) {
+		// comment out the next two lines to load the local copy of jQuery
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js', false, '1.8.1');
+		wp_enqueue_script('jquery');
+	}
+}
+add_action('init', 'modify_jquery');
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *

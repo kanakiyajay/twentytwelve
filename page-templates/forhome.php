@@ -50,33 +50,44 @@ get_header(); ?>
             </div>
             <div class="clearfix"></div>
         </div>
-      <?php if (have_posts()) : ?>
-<div id="post-area">
-<?php while (have_posts()) : the_post(); ?> 
+  <div class="row" id="masonrywrapper">
+      <div id="masonryrow">
+          <?php
+                // The Query
+                query_posts( 'cat=-1&order=RAND' );
+              
+                // The Loop
+                while ( have_posts() ) : the_post();?>
+                <?php $importance = strtolower(get_post_meta($post->ID,'importance_level',true)); ?>
+                <div id="post-<?php the_ID(); ?>" class="post <?php echo $importance;  ?>"  >
+                    <!--class="post <?php echo strtolower($importance) ?>"-->
+                    <p><?php echo $importance ?> </p>
+                     <?php if ( has_post_thumbnail() ) { ?>
+                     <div class="post-image"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'summary-image' );  ?></a></div>
+                      <div class="post-category"><p><?php the_category(', ') ?></p></div>
+                   
+                      <?php } ?>
+                            <div class="post-copy"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                            <!--<p class="post-date"><?php the_time(get_option('date_format')); ?>  </p>-->
+      
+                    <?php the_excerpt(); ?> 
+      
+                           <!--<p class="post-link"><a href="<?php the_permalink() ?>">View more &rarr;</a></p>-->
+                     </div>
+                   </div>
+                    <?php 
+                endwhile;
+              
+                // Reset Query
+                wp_reset_query();
+              
+                ?>
+                <div class="clearfix"></div>
+      </div>
+      <div class="clear"></div>
+  </div>
 
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-         <?php if ( has_post_thumbnail() ) { ?>
-         <div class="gridly-image"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'summary-image' );  ?></a></div>
-          <div class="gridly-category"><p><?php the_category(', ') ?></p></div>
-       
-          <?php } ?>
-                <div class="gridly-copy"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-                <p class="gridly-date"><?php the_time(get_option('date_format')); ?>  </p>
-
-<?php the_excerpt(); ?> 
-
-               <p class="gridly-link"><a href="<?php the_permalink() ?>">View more &rarr;</a></p>
-         </div>
-       </div>
-       
-       
-
-<?php endwhile; ?>
-</div>
-<?php else : ?>
-<?php endif; ?>
-
-        <div class="row" id="masonryrow">
+  <!--      <div class="row" id="masonryrow">
             <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
             <div class="events big"><img src="<?php echo get_template_directory_uri();?>/images/placeholder.png" alt=""></div>
             <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
@@ -87,9 +98,7 @@ get_header(); ?>
             <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
             <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
             <div class="events big"><img src="<?php echo get_template_directory_uri();?>/images/placeholder.png" alt=""></div>
-        </div>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.masonry.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/sequence.jquery-min.js"></script>
+        </div>-->
 <?php get_footer(); ?>
     </body>
 </html>

@@ -23,14 +23,24 @@ jQuery(document).ready(function($) {
 
   //For Masonry
   var $container = $('#masonryrow');
-  	$container.imagesLoaded(function(){
-	  $container.masonry({
-	    itemSelector : '.events',
-	    columnWidth : 240
-	  });
-  	});
+$container.imagesLoaded( function(){
+   
+  $container.masonry({
+    // options
+    itemSelector : '.post',
+    // options...
+  isAnimated: true,
+  animationOptions: {
+    duration: 400,
+    easing: 'linear',
+    queue: false
+  }
+  
+  });
+});
+});
   //For the Hover Effect
-$(".events").hover(
+/*$(".events").hover(
 	  function () {
 	    $(this).addClass('eventhover');
 	  },
@@ -38,4 +48,4 @@ $(".events").hover(
 	    $(this).removeClass('eventhover');
 	  }
 );
-});
+});*/

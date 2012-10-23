@@ -129,7 +129,7 @@
 }
 @media only screen and (max-width: 580px) {
 
-#megamenu{width: 100%;}
+#megamenu{width: 100%;min-height:5em; }
 .hidden,.sub-menu{display: none;}
 .unhidden{display: block;}
 
