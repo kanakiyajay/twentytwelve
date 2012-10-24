@@ -16,7 +16,7 @@ get_header(); ?>
 				
 				<div class="row" id="customfields">
 					<div class="col span_1_of_4" id="register">
-					<a href="<?php get_site_url(); ?>/register">	<p>Register <br> For this <?php the_title(); ?></p></a>
+					<a href="<?php get_site_url(); ?>/register">	<p>Register <br> <span class="hidden">For this <?php the_title(); ?></span></p></a>
 					</div>
 					<div class="col span_1_of_4" id="entryfee">
 					<a href="#"><p>Entry Fee <br>
@@ -33,15 +33,15 @@ get_header(); ?>
 					<div class="col span_1_of_4" id="pdf">
 						<?php $pdf = get_post_meta($post->ID, 'pdf', true); ?>
 						<a href="<?php get_site_url(); ?>/pdf/<?php $pdf ?>">
-							<p>Download Pdf Problem-Statement</p>
+							<p><span class="hidden">Download Pdf</span> Problem-Statement</p>
 						</a>
 					</div>
 					<div class="col span_1_of_4" id="eventhead">
-						<a href="#"><p>Event Head : <?php echo get_the_author_meta('display_name'); ?><br>
-							<?php $number = htmlspecialchars(get_the_author_meta('number')); 
-							echo $number;
+						<p>Event Head :<br> <?php echo get_the_author_meta('display_name'); ?><br>
+							<?php $number = htmlspecialchars(get_the_author_meta('number'));
+							echo '<a href="tel:'.$number.'">'.$number.'</a>';
 							?>
-							</p></a>
+							</p>
 					</div>
 					<div class="clear"></div>
 				</div>

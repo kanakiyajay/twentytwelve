@@ -1,6 +1,9 @@
 .bg,#primary,#main{
 	background: url(images/tiny_grid.png);
 }
+#primary{
+	overflow-x: hidden;
+}
 .bg:nth-child(2){
 	padding: 5px 0;
 }
@@ -65,7 +68,12 @@
 .entry-content{
 	padding: 3%;
 }
-.span_1_of_4{width: 22.88%}
+.span_1_of_4{
+	width: 21%;
+	margin: 1%;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 1px 0px 5px gray;
+}
 #customfields{
 	width: 90%;
 	float: none;
@@ -78,6 +86,8 @@
 #customfields .col,.col a,.col a:visited{
 	color: white;
 	text-align: center;
+	display: block;
+	height: 100%;
 }
 #customfields p{
 	line-height: 2.3
