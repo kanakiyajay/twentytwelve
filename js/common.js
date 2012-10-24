@@ -22,9 +22,10 @@ var $j = jQuery.noConflict();
 		console.log('It is the Home page');
 		var lastVisit = localStorage.getItem("lastVisited");
 		var lastTitle = localStorage.getItem("lastTitle");
+		console.log(lastVisit);
 		if (lastVisit!=='' && lastVisit !==null) {
 			//Show the last Visited URL
-			$('body').append('<div style="position:fixed;top:10%;left:0;background-color:black;padding:0.5%"><a style="color:white" href="'+lastVisit+'">Last Visited :'+lastTitle+'</a></div>')
+			$('body').append('<div style="position:absolute;top:10%;left:0;background-color:black;padding:0.5%"><a style="color:white" href="'+lastVisit+'">Last Visited :'+lastTitle+'</a></div>')
 		};
 	}
 	else{

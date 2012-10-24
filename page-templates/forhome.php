@@ -61,18 +61,18 @@ get_header(); ?>
                 <?php $importance = strtolower(get_post_meta($post->ID,'importance_level',true)); ?>
                 <div id="post-<?php the_ID(); ?>" class="post <?php echo $importance;  ?>"  >
                     <!--class="post <?php echo strtolower($importance) ?>"-->
-                    <p><?php echo $importance ?> </p>
-                     <?php if ( has_post_thumbnail() ) { ?>
-                     <div class="post-image"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'summary-image' );  ?></a></div>
-                      <div class="post-category"><p><?php the_category(', ') ?></p></div>
-                   
-                      <?php } ?>
-                            <div class="post-copy"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-                            <!--<p class="post-date"><?php the_time(get_option('date_format')); ?>  </p>-->
-      
-                    <?php the_excerpt(); ?> 
-      
-                           <!--<p class="post-link"><a href="<?php the_permalink() ?>">View more &rarr;</a></p>-->
+                     <div class="post-wrapper">
+                         <?php if ( has_post_thumbnail() ) { ?>                         
+                         <div class="post-image">
+                            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'summary-image' );  ?></a>
+                            <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                        </div>
+                          <div class="post-category"><p><?php the_category(', ') ?></p></div>                                            
+                          <?php } ?>
+                                <div class="post-copy">      
+                                             <?php //the_excerpt(); ?>
+                                             <?php echo substr(the_excerpt(),0,20); ?>
+                         </div>
                      </div>
                    </div>
                     <?php 
