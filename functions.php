@@ -107,6 +107,7 @@ function twentytwelve_scripts_styles() {
 	wp_enqueue_script('jquery_masonry',array('jquery'),false,true);
 	wp_enqueue_script('sequence',array('jquery'),false,true);
 	wp_enqueue_script('mainjs',array('jquery','jquery_masonry','sequence'));
+	//wp_register_style( 'common', get_template_directory_uri().'/post.css');
 	}
 	if (is_category()) {
 		wp_register_script('jquery_masonry', 'http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js', array('jquery') );
@@ -124,7 +125,7 @@ function twentytwelve_scripts_styles() {
 	 * }
 	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
 	 */
-
+	/*  For the StyleSheets*/
 	/* translators: If there are characters in your language that are not supported
 	   by Open Sans, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentytwelve' ) ) {
@@ -147,12 +148,14 @@ function twentytwelve_scripts_styles() {
 			'subset' => $subsets,
 		);
 		wp_enqueue_style( 'twentytwelve-fonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
+
 	}
 
 	/*
 	 * Loads our main stylesheet.
 	 */
 	wp_enqueue_style( 'twentytwelve-style', get_stylesheet_uri() );
+	//wp_enqueue_style('common',get_template_directory_uri().'/post.css');
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
 

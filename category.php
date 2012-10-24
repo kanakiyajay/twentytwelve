@@ -12,9 +12,10 @@
  */
 
 get_header(); ?>
-
-	<section id="primary" class="site-content">
-		<div id="content" role="main">
+	<div id="masonryrow">
+		
+	<!--<section id="primary" class="site-content">
+		<div id="content" role="main">-->
 
 		<?php if ( have_posts() ) : ?>
 			<!--<header class="archive-header">
@@ -56,13 +57,29 @@ get_header(); ?>
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
-
-		</div><!-- #content -->
-	</section><!-- #primary -->
+		<div class="clear"></div>
+	</div>
+		<!--</div> #content -->
+	<!--</section> #primary -->
 
 <script type="text/javascript">
 	jQuery(document).ready(function  ($) {
-		$('')
-	})
+		  var $container = $('#masonryrow');
+			$container.imagesLoaded( function(){
+			   
+			  $container.masonry({
+			    // options
+			    itemSelector : '.post',
+			    // options...
+			  isAnimated: true,
+			  animationOptions: {
+			    duration: 400,
+			    easing: 'linear',
+			    queue: false
+			  }
+			  
+			  });
+			});
+	});
 </script>
 <?php get_footer(); ?>
