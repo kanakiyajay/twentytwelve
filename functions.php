@@ -509,7 +509,7 @@ function my_user_contactmethods($user_contactmethods){
   unset($user_contactmethods['yim']);
   unset($user_contactmethods['aim']);
   unset($user_contactmethods['jabber']);
-  unset($user_contactmethods['website']);
+  unset($user_contactmethods['Website']);
   $user_contactmethods['number'] = 'Mobile Number';
    return $user_contactmethods;
 }

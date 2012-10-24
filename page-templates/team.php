@@ -27,6 +27,7 @@ get_header(); ?>
 				<?php echo get_avatar(get_the_author_meta('user_email', $author->post_author), 80); ?>
 				<p><?php the_author_meta('description', $author->post_author); ?></p>
 				<p><?php the_author_meta('number', $author->post_author); ?></p>
+				<p><?php the_author_meta('designation',$author->post_author) ?> </p>
 				<p><?php 
 					$user = new WP_User( $author->post_author);
 				if ( !empty( $user->roles ) && is_array( $user->roles ) ) {
