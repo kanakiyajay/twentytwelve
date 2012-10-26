@@ -2,20 +2,23 @@ var $j = jQuery.noConflict();
 	$j(document).ready(function  ($) {
 		
 	$("#menuicon").on("click",function  () {
-	     $('#megamenu').toggle();
+	     $('#megamenu').slideToggle();
 	     //console.log('menu icon clicked ');
-	     $(this).toggleClass('closer');
+	     $(this).toggleClass("active");
 	  });
 	var $image = $('#menuimage');
 	var $imagedescription = $('#menudescription');
 	var $submenu = $('.sub-menu>li');
 	$submenu.on('hover',function  () {
+		$image.toggleClass('hover');
+	});
+	/*$submenu.on('hover',function  () {
 		console.log($(this));
 		var linkID = $(this).text();
 		var description = $(this).children('a').attr('title');
 		$imagedescription.text(description);
 		$image.css("background-image", "url('http://melange.co.cc/wp-content/uploads/2012/10/" + linkID + "-150x150.jpg')");
-	});
+	});*/
 	//For Storing the Last Visited
 	var theUrl = 'http://melange2012.co.cc/';
 	if (theUrl===window.location.href.toString()) {

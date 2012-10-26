@@ -26,10 +26,8 @@ get_header(); ?>
                                 <h2 class="flash2 animate-in">Passion.</h2>
                                 <h2 class="flash3 animate-in">Revolution</h2>
                             <!--<img src="images/default.jpg" class="default animate-in" alt="Deafult Image">-->
-                            
                         </li>
                         <li id="slide2">
-                            
                                 <h2 class="title1">
                                     25,000 Footfalls
                                 </h2>

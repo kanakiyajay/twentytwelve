@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
   var options = {
 
     autoPlay : true,
-    autoPlayDelay : 100,
+    autoPlayDelay : 10,
     animateStartingFrameIn: true,
     preloadTheseFrames: [1],
     nextButton : true,
@@ -14,12 +14,12 @@ jQuery(document).ready(function($) {
   };
   var sequence = $("#maincta").sequence().data("sequence");
   console.log(sequence);
-  $('.prev').on('click',function () {
+  /*$('.prev').on('click',function () {
   	sequence.prev();
   });
   $('.next').on('click',function () {
   	sequence.next();
-  });
+  });*/
 
   //For Masonry
   var $container = $('#masonryrow');
