@@ -62,15 +62,15 @@ get_header(); ?>
                      <div class="post-wrapper">
                          <?php if ( has_post_thumbnail() ) { ?>                         
                          <div class="post-image">
-                            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'summary-image' );  ?></a>
+                            <?php the_post_thumbnail( 'summary-image' );  ?>
                             <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                          <div class="post-category"><p><?php the_category(', ') ?></p></div>
                         </div>
-                          <div class="post-category"><p><?php the_category(', ') ?></p></div>                                            
                           <?php } ?>
-                                <div class="post-copy">      
+                               <!-- <div class="post-copy">      
                                              <?php //the_excerpt(); ?>
                                              <?php echo substr(the_excerpt(),0,20); ?>
-                         </div>
+                         </div>-->
                      </div>
                    </div>
                     <?php 

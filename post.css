@@ -44,7 +44,6 @@
 	z-index: 200;
 	cursor: pointer;
 	display: block;
-	background-repeat: no-repeat;
 	text-indent: -999em;
 }
 #menuicon.active{

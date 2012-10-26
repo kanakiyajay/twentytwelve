@@ -14,13 +14,12 @@ jQuery(document).ready(function($) {
   };
   var sequence = $("#maincta").sequence().data("sequence");
   console.log(sequence);
-  /*$('.prev').on('click',function () {
+  $('.prev').on('click',function () {
   	sequence.prev();
   });
   $('.next').on('click',function () {
   	sequence.next();
-  });*/
-
+  });
   //For Masonry
   var $container = $('#masonryrow');
 $container.imagesLoaded( function(){
