@@ -1,0 +1,10 @@
+//For Theme
+
+Remove comment-reply.js
+Remove scripts.js
+Remove unncessary lines in styles.css
+
+
+//For Contact Form 7
+
+Remove jquery.form.min.js from all pages

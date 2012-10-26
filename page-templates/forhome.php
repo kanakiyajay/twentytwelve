@@ -22,12 +22,20 @@ get_header(); ?>
                 <div id="maincta">
                     <ul>
                         <li id="slide1">
+                          <div class="box"></div>
+                          <div class="box"></div>
+                          <div class="box"></div>
+                          <div class="box"></div>
                                 <h2 class="flash1 animate-in">Thoughts.</h2>
                                 <h2 class="flash2 animate-in">Passion.</h2>
                                 <h2 class="flash3 animate-in">Revolution</h2>
                             <!--<img src="images/default.jpg" class="default animate-in" alt="Deafult Image">-->
                         </li>
                         <li id="slide2">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
+                                <div class="box"></div>
                                 <h2 class="title1">
                                     25,000 Footfalls
                                 </h2>
@@ -35,13 +43,18 @@ get_header(); ?>
                                     10,000 Participants
                                 </h2>
                         </li>
-                        <li id="slide3">                            
+                        <li id="slide3">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>                            
                                 <h2 class="title1">
                                     53 Events
                                 </h2>
                                 <h2 class="title2">
                                     1 Lakh Rupees prizes
-                                </h2>                            
+                                </h2>
+                                <div class="box"></div>                            
                         </li>
                     </ul>
                 </div>
@@ -62,15 +75,15 @@ get_header(); ?>
                      <div class="post-wrapper">
                          <?php if ( has_post_thumbnail() ) { ?>                         
                          <div class="post-image">
-                            <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'summary-image' );  ?></a>
-                            <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                            <?php the_post_thumbnail( 'summary-image' );  ?>
+                         <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                          <div class="post-category"><p><?php the_category(', ') ?></p></div>
                         </div>
-                          <div class="post-category"><p><?php the_category(', ') ?></p></div>                                            
                           <?php } ?>
-                                <div class="post-copy">      
+                               <!-- <div class="post-copy">      
                                              <?php //the_excerpt(); ?>
                                              <?php echo substr(the_excerpt(),0,20); ?>
-                         </div>
+                         </div>-->
                      </div>
                    </div>
                     <?php 

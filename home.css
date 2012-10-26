@@ -53,7 +53,7 @@ background-color: orange;
 	background-size: cover;
 }
 #slide1 h2.animate-in  {top: 60%;}
-#slide1 h2.animate-out {top: 80%;}
+#slide1 h2.animate-out {top: 80%;opacity: 0}
 .flash1.animate-in{-webkit-transition-duration: 0.3s;left: 10%;}
 .flash1.animate-out{-webkit-transition-duration:1.2s;left: 100%;}
 .flash2.animate-in{-webkit-transition-duration: 0.8s;left: 45%;}
@@ -64,6 +64,41 @@ background-color: orange;
     left: -100%;
     top: 50%;
 -webkit-transition-duration: 0.5s;
+}
+.box{
+	left: -100%;
+	top: 10%;
+	width: 20px;
+	height: 20px;
+	-webkit-transition-duration: 0.5s;	
+}
+.box.animate-in:nth-child(1){
+	left: 10%;
+	background-color: red;
+}
+.box.animate-in:nth-child(2){
+	left: 30%;
+	background-color: green;
+}
+.box.animate-in:nth-child(3){
+	left: 50%;
+	background-color: blue;
+}
+.box.animate-in:nth-child(4){
+	left: 70%;
+	background-color: gray;
+}
+.box.animate-out:nth-child(1){
+	left: -10%;
+}
+.box.animate-out:nth-child(2){
+	left: -30%;
+}
+.box.animate-out:nth-child(3){
+	left: -50%;
+}
+.box.animate-out:nth-child(4){
+	left: -70%;
 }
 .title2{
 	left: -100%;
