@@ -76,7 +76,7 @@ get_header(); ?>
                          <?php if ( has_post_thumbnail() ) { ?>                         
                          <div class="post-image">
                             <?php the_post_thumbnail( 'summary-image' );  ?>
-                         <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                            <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
                           <div class="post-category"><p><?php the_category(', ') ?></p></div>
                         </div>
                           <?php } ?>
