@@ -36,13 +36,3 @@ $container.imagesLoaded( function(){
   });
 });
 });
-  //For the Hover Effect
-/*$(".events").hover(
-	  function () {
-	    $(this).addClass('eventhover');
-	  },
-	  function () {
-	    $(this).removeClass('eventhover');
-	  }
-);
-});*/

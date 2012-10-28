@@ -61,7 +61,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 body {
 	line-height: 1;
-	background: url(images/pnx.png);
+	/*background: url(images/pnx.png);*/
 }
 ol,
 ul {
@@ -470,6 +470,7 @@ a:hover {
 
 /* Page structure */
 .site {
+	overflow-x: hidden;
 	/*padding: 0 24px;
 	padding: 0 1.714285714rem;
 	background-color: #fff;*/
