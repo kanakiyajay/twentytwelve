@@ -71,20 +71,24 @@ get_header(); ?>
                 while ( have_posts() ) : the_post();?>
                 <?php $importance = strtolower(get_post_meta($post->ID,'importance_level',true)); ?>
                 <div id="post-<?php the_ID(); ?>" class="post <?php echo $importance;  ?>"  >
-                    <!--class="post <?php echo strtolower($importance) ?>"-->
-                     <div class="post-wrapper">
+                  <div class="link-post" href="<?php the_permalink() ?>" style="display:none"></div>
                          <?php if ( has_post_thumbnail() ) { ?>                         
                          <div class="post-image">
                             <?php the_post_thumbnail( 'summary-image' );  ?>
-                            <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-                          <div class="post-category"><p><?php the_category(', ') ?></p></div>
-                        </div>
+                      </div>
+ <?php $parentscategory ="";
+foreach((get_the_category()) as $category) {
+if ($category->category_parent == 0) {
+$parentscategory .=$category->name ;
+}
+}?>
+                     <div class="post-wrapper <?php echo strtolower($parentscategory);  ?>"> 
                           <?php } ?>
-                               <!-- <div class="post-copy">      
-                                             <?php //the_excerpt(); ?>
-                                             <?php echo substr(the_excerpt(),0,20); ?>
-                         </div>-->
-                     </div>
+                            <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                          <div class="post-copy">      
+                              <i><?php echo htmlspecialchars(get_post_meta($post->ID,'concise',true)); ?></i>
+                         </div>
+                      </div>
                    </div>
                     <?php 
                 endwhile;
@@ -97,19 +101,6 @@ get_header(); ?>
       </div>
       <div class="clear"></div>
   </div>
-
-  <!--      <div class="row" id="masonryrow">
-            <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
-            <div class="events big"><img src="<?php echo get_template_directory_uri();?>/images/placeholder.png" alt=""></div>
-            <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
-            <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
-            <div class="events big"><img src="<?php echo get_template_directory_uri();?>/images/placeholder.png" alt=""></div>
-            <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
-            <div class="events big"><img src="<?php echo get_template_directory_uri();?>/images/placeholder.png" alt=""></div>
-            <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
-            <div class="events small"><img src="<?php echo get_template_directory_uri();?>/images/call.jpg " alt=""></div>
-            <div class="events big"><img src="<?php echo get_template_directory_uri();?>/images/placeholder.png" alt=""></div>
-        </div>-->
 <?php get_footer(); ?>
     </body>
 </html>

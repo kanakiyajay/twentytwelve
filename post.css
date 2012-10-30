@@ -1,7 +1,7 @@
- a{text-decoration: none;color: inherit;}
+a{text-decoration: none;color: inherit;}
 ::-webkit-scrollbar-corner{background:transparent;display:none}
 ::-webkit-scrollbar{width:5px;height:8px}
-::-webkit-scrollbar-track{background:rgba(201, 201, 201,0.6);}
+::-webkit-scrollbar-track{background:rgba(201, 201, 201,0.3);}
 ::-webkit-scrollbar-thumb{background:rgba(192, 130, 130,0.8);}
 .row,.subrow{width: 98%;overflow-x:hidden ;margin: 0 auto}
 .subrow{height: 50%;}
@@ -25,6 +25,10 @@
 	display: table-cell;
    text-align: center;
    vertical-align: middle;
+}
+#logotext{
+	text-align: center;
+	overflow: hidden;
 }
 .clearfix{clear: both;}
 #hiddenlogo {
@@ -125,8 +129,13 @@
 	background-color: white;
 	color: black;
 }
-#logotext{
-	text-align: center;
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(67,34,100,0.5);
+	padding: 0.8%;
+	color: white;
 }
 @media only screen and (max-width: 580px) {
 
@@ -159,7 +168,7 @@ background: rgba(231, 144, 13,0.95);
 	padding: 15px 0;
 	padding-left: 10px;
 }
-.sub-menu li{
+.sub-menu li,footer{
 	display: none;
 }
 

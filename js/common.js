@@ -12,6 +12,9 @@ var $j = jQuery.noConflict();
 	$submenu.on('hover',function  () {
 		$image.toggleClass('hover');
 	});
+	/*
+	*	Menu Transitions
+	*/
 	/*$submenu.on('hover',function  () {
 		console.log($(this));
 		var linkID = $(this).text();
@@ -26,7 +29,7 @@ var $j = jQuery.noConflict();
 		var lastVisit = localStorage.getItem("lastVisited");
 		var lastTitle = localStorage.getItem("lastTitle");
 		console.log(lastVisit);
-		if (lastVisit!=='' && lastVisit !==null) {
+		if (lastVisit!=='' && lastVisit !==null ) {
 			//Show the last Visited URL
 			$('body').append('<div style="position:absolute;top:10%;left:0;background-color:black;padding:0.5%"><a style="color:white" href="'+lastVisit+'">Last Visited :'+lastTitle+'</a></div>')
 		};

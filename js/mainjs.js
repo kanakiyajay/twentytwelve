@@ -35,4 +35,7 @@ $container.imagesLoaded( function(){
   
   });
 });
+$('.post').on('click',function  () {
+    window.location= $(this).children('.link-post').attr('href');
+});
 });

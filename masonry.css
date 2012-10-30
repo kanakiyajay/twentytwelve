@@ -1,5 +1,9 @@
+body{
+	background: url(images/az_subtle.png);
+}
 #masonrywrapper{
-	min-height: 60em;
+	min-height: 80em;
+	overflow: hidden;
 }
 #masonryrow{
 	margin-top: 1.5%;
@@ -8,59 +12,54 @@
 #masonryrow .post { 
 	width:310px;
 	background:#FFF;
-	margin-right:15px; 
-	margin-top:20px;
 	position:relative;
-	-webkit-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
-	box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.5);
 }
-#masonryrow .medium{
+#masonryrow .medium,.low{
 	width:310px;
 }
 #masonryrow .high{
-	width: 620px;
-}
-#masonryrow .low{
-	width: 310px;
-	overflow: hidden;
+	width: 500px;
 }
 .post-wrapper{
-	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 5.3em;
+	width: 150px;
+	padding: 1.5%;
+	opacity: 0.9;
+	cursor: pointer;
+	background-color: rgb(138, 165, 111);	
 }
-.post-image img{
-	width: 100%;
-	-webkit-transition-duration:0.6s;
+/*
+*Colours for different Event Categories
+*/
+.cybernetics{
+	background-color: rgb(217, 142, 76);
 }
-.post-image img:hover{
-	-webkit-filter: sepia(50%);
+.six{
+	background-color: rgb(138, 165, 111);
 }
-.post-copy{
-width: 92%;
-margin: 10px auto;
+.innovation{
+	background-color: rgb(227, 206, 177);
+}
+.vishwatronix{
+	background-color: rgb(96, 180, 224);
 }
 .thetitle{
-position: absolute;
-margin-top: -2%;
-width: 60%;
-background-color: rgba(0,0,0,0.5);
--webkit-transition-duration:0.8s;
-}
-.post-image:hover .thetitle{
-	display: block;
-	margin-left: 10%;
-	margin-top: -20%;
-	-webkit-transform : rotate(-10deg);
+text-transform: uppercase;
+font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
 }
 .thetitle a{
-	padding: 3%;
+padding: 3%;
 width: 100%;
-background-color: black;
 display: block;
-color: whitesmoke;
+color: black;
+}
+.post-copy{
+	position: absolute;
+	bottom: 1.5em;
 }
 @media only screen and (max-width: 580px) {
-	#masonry .post{
-		width: 310px !important ;
-	}
+
 }

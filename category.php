@@ -26,33 +26,29 @@ get_header(); ?>
 			<?php endif; ?>
 			</header>--><!-- .archive-header -->
 
-			<?php
-			/* Start the Loop */
-
-				/* Include the post format-specific template for the content. If you want to
-				 * this in a child theme then include a file called called content-___.php
-				 * (where ___ is the post format) and that will be used instead.
-				 */
-			while ( have_posts() ) : the_post();?>
-			<?php $importance = strtolower(get_post_meta($post->ID,'importance_level',true)); ?>
+         <?php
+                while ( have_posts() ) : the_post();?>
+                <?php $importance = strtolower(get_post_meta($post->ID,'importance_level',true)); ?>
                 <div id="post-<?php the_ID(); ?>" class="post <?php echo $importance;  ?>"  >
-                    <!--class="post <?php echo strtolower($importance) ?>"-->
-                    <p><?php echo $importance ?> </p>
-                     <?php if ( has_post_thumbnail() ) { ?>
-                     <div class="post-image"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'summary-image' );  ?></a></div>
-                      <div class="post-category"><p><?php the_category(', ') ?></p></div>
-                   
-                      <?php } ?>
-                            <div class="post-copy"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-                            <!--<p class="post-date"><?php the_time(get_option('date_format')); ?>  </p>-->
-      
-                    <?php the_excerpt(); ?> 
-      
-                           <!--<p class="post-link"><a href="<?php the_permalink() ?>">View more &rarr;</a></p>-->
-                     </div>
+                  <div class="link-post" href="<?php the_permalink() ?>" style="display:none"></div>
+                         <?php if ( has_post_thumbnail() ) { ?>                         
+                         <div class="post-image">
+                            <?php the_post_thumbnail( 'summary-image' );  ?>
+                      </div>
+                     <div class="post-wrapper "> 
+                          <?php } ?>
+                            <h2 class="thetitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                          <div class="post-copy">      
+                              <i><?php echo htmlspecialchars(get_post_meta($post->ID,'concise',true)); ?></i>
+                         </div>
+                      </div>
                    </div>
                     <?php 
                 endwhile;
+              
+                // Reset Query
+                wp_reset_query();
+              
                 ?>
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
