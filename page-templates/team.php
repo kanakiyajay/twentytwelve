@@ -23,22 +23,21 @@ get_header(); ?>
 		<div class='author' id='author-<?php the_author_meta('user_login', $author->post_author); ?>'>
 			<?php $count = $count + 1; 
 			 if ($flag) {?>
-			<div class='authorimage'>
+			<div class='authorimage' >
 				<?php echo get_avatar(get_the_author_meta('user_email', $author->post_author), 200); ?>
 			</div>
-			<div class="description">
+			<div class="description left">
 				<h3><?php the_author_meta('display_name', $author->post_author); ?></h3>				
 					<!--<p><?php the_author_meta('description', $author->post_author); ?></p>
 					<p><?php the_author_meta('number', $author->post_author); ?></p>-->
 					<p><?php the_author_meta('designation',$author->post_author) ?> </p>
 			</div>
 			<?php   } else {?>
-			<div class="description">
+			<div class="description right">
 				<h3><?php the_author_meta('display_name', $author->post_author); ?></h3>				
 					<!--<p><?php the_author_meta('description', $author->post_author); ?></p>
 					<p><?php the_author_meta('number', $author->post_author); ?></p>-->
 					<p><?php the_author_meta('designation',$author->post_author) ?> </p>
-					<p><?php echo $count%3; ?> </p>
 			</div>
 			<div class='authorimage'>
 				<?php echo get_avatar(get_the_author_meta('user_email', $author->post_author), 200); ?>
@@ -61,7 +60,9 @@ get_header(); ?>
 			</ul>-->
 			<?php //endif; ?>
 		</div>
+		<div class="clear unhidden"></div>
 		<?php  if ($count%3===0) {
+				echo '<div class="clear clearfix"></div>';
 						if ($flag) {
 							$flag = false;
 						} else {

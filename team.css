@@ -1,8 +1,51 @@
-.author,.authorimage,.description{
+.site{
+max-width: 1156px;
+max-width: 82.571429rem;
+}
+.authorimage,.description{
 	float: left;
+	width: 50%;
 }
 .author { 
 	width: 33.333%;
 	float: left;
+	margin-top: -2px;
 }
-
+.authorimage{
+	overflow: hidden;
+}
+.authorimage img{
+	max-width: 100%;
+}
+.description{
+	height: 200px;
+}
+.description h3,.description p{
+	color: white;
+	text-align: center;
+	padding-top: 4%;
+}
+.description h3{
+	padding-top: 60%;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+.right{
+	background: url(images/bt-next.png) orange no-repeat 79% 25%;
+}
+.left{
+	background: url(images/bt-prev.png) orange no-repeat 21% 25%;
+}
+@media only screen and (min-width: 700px) and (max-width: 580px) {
+	.description{
+		background-color: orange;
+	}
+}
+@media only screen and (max-width: 580px) {/*Below 580px*/
+	.author { 
+		float: none;
+		width: 76%;
+		margin: 4px auto;
+}
+}
