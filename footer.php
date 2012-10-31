@@ -34,5 +34,18 @@
 		});
 	</script>
 <?php } ?>
+<?php if(is_single()) { ?>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.toc.min.js" ></script>
+<script type="text/javascript">
+		jQuery(document).ready(function  ($) {
+			$('#toc').toc({
+				'selectors' : 'h2',
+				'container': '#primary',
+				 'smoothScrolling': true
+			});
+		});
+	</script>
+
+<?php } ?>
 </body>
 </html>

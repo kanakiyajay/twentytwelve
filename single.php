@@ -15,6 +15,7 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 				
 				<div class="row" id="customfields">
+					<h2 style="display:none">Register</h2>
 					<div class="col span_1_of_4" id="register">
 					<a href="<?php get_site_url(); ?>/register">	<p>Register <br> <span class="hidden">For this <?php the_title(); ?></span></p></a>
 					</div>
@@ -61,6 +62,4 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
