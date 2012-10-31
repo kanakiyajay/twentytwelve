@@ -2,12 +2,8 @@
 /**
  * Template Name: Team
  *
- * Description: The Awesome Team Of Melange
+ * Description: For the The Awesome Team Of Melange
  *
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
  */
 
 get_header(); ?>
@@ -34,9 +30,8 @@ get_header(); ?>
 			</div>
 			<?php   } else {?>
 			<div class="description right">
-				<h3><?php the_author_meta('display_name', $author->post_author); ?></h3>				
-					<!--<p><?php the_author_meta('description', $author->post_author); ?></p>
-					<p><?php the_author_meta('number', $author->post_author); ?></p>-->
+				<h3><?php the_author_meta('display_name', $author->post_author); ?></h3>
+					<!--<p><?php the_author_meta('number', $author->post_author); ?></p>-->
 					<p><?php the_author_meta('designation',$author->post_author) ?> </p>
 			</div>
 			<div class='authorimage'>
@@ -46,23 +41,12 @@ get_header(); ?>
 			/*$recentPost = new WP_Query('author='.$author->post_author.'&showposts=1');
 			while($recentPost->have_posts()): $recentPost->the_post();*/
 			?>
-			<!--<h4>Event Head: <a href='<?php the_title();?>'><?php the_title(); ?></a></h4>-->
-			<?php //endwhile; ?>
-			<?php //if(get_the_author_meta('twitter', $author->post_author) || get_the_author_meta('facebook', $author->post_author) || get_the_author_meta('linkedin', $author->post_author) || get_the_author_meta('digg', $author->post_author) || get_the_author_meta('flickr', $author->post_author)): ?>
-			<!--<ul class='connect'>
-				<?php if(get_the_author_meta('twitter', $author->post_author)): ?>
-				<li><a href='http://twitter.com/<?php the_author_meta('twitter', $author->post_author); ?>'>Twitter</a></li>
-				<?php endif; ?>
-				<?php if(get_the_author_meta('facebook', $author->post_author)): ?>
-				<li><a href='http://www.facebook.com/<?php the_author_meta('facebook', $author->post_author); ?>'>Facebook</a></li>
-				<?php endif; ?>
-				<?//php endif; ?>
-			</ul>-->
-			<?php //endif; ?>
+			<div class='moreinfo'>
+				<p><?php  echo get_the_author_meta('description', $author->post_author)?> </p>
+			</div>
 		</div>
 		<div class="clear unhidden"></div>
 		<?php  if ($count%3===0) {
-				echo '<div class="clear clearfix"></div>';
 						if ($flag) {
 							$flag = false;
 						} else {

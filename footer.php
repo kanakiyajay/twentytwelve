@@ -24,6 +24,15 @@
 </div><!-- #page -->
 <?php } ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
+<?php if (is_page('the-team')) { ?>
 <?php wp_footer(); ?>
+	<script type="text/javascript">
+		jQuery(document).ready(function  ($) {
+			$(".author").click(function(){
+				$(this).children('.moreinfo').toggle();
+			});
+		});
+	</script>
+<?php } ?>
 </body>
 </html>

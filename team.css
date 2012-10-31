@@ -10,6 +10,7 @@ max-width: 82.571429rem;
 	width: 33.333%;
 	float: left;
 	margin-top: -2px;
+	-webkit-transition : all 0.5s linear;
 }
 .authorimage{
 	overflow: hidden;
@@ -36,6 +37,19 @@ max-width: 82.571429rem;
 }
 .left{
 	background: url(images/bt-prev.png) orange no-repeat 21% 25%;
+}
+.moreinfo{
+	display: none;
+	width: 100%;
+	padding: 3%;
+	float: left;
+	min-height: 5em;
+	-webkit-box-sizing : border-box;
+	box-sizing:border-box;
+	-webkit-transition : all 0.5s linear;
+}
+.moreinfo p{
+	text-align: center;
 }
 @media only screen and (min-width: 700px) and (max-width: 580px) {
 	.description{
