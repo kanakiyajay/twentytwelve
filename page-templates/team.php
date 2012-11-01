@@ -8,8 +8,8 @@
 
 get_header(); ?>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/team.css">
+		<h2 class='entry-title'>The Melange Team</h2> <br> <br>
 	<div id='auth-content' class='thincolumn'>
-		<h2 class='pagetitle'>The Melange Team</h2> <br> <br>
 		<?php $count = 0; 
 		$flag = true;		
 		$authors = $wpdb->get_results('SELECT DISTINCT post_author FROM '.$wpdb->posts);
@@ -42,6 +42,9 @@ get_header(); ?>
 			while($recentPost->have_posts()): $recentPost->the_post();*/
 			?>
 			<div class='moreinfo'>
+				<div class="close">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/close.png" alt="">
+				</div>
 				<p><?php  echo get_the_author_meta('description', $author->post_author)?> </p>
 			</div>
 		</div>
@@ -55,5 +58,6 @@ get_header(); ?>
 						
 					} ?> 
 		<?php endforeach; endif; ?>
+		<div class="clear"></div>
 	</div>
 <?php get_footer(); ?>

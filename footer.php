@@ -29,8 +29,13 @@
 	<script type="text/javascript">
 		jQuery(document).ready(function  ($) {
 			$(".author").click(function(){
-				$(this).children('.moreinfo').toggle();
+				$(this).children('.moreinfo').fadeIn();
+			}).children('.moreinfo').click(function  () {
+				return false;
 			});
+			$('.close').click(function  () {
+				$(this).parent('.moreinfo').fadeOut();
+			})
 		});
 	</script>
 <?php } ?>
