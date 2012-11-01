@@ -31,7 +31,7 @@ var $j = jQuery.noConflict();
 		console.log(lastVisit);
 		if (lastVisit!=='' && lastVisit !==null ) {
 			//Show the last Visited URL
-			$('body').append('<div style="position:absolute;top:10%;left:0;background-color:black;padding:0.5%"><a style="color:white" href="'+lastVisit+'">Last Visited :'+lastTitle+'</a></div>')
+			$('body').append('<div class="hidden" style="position:absolute;top:10%;left:0;background-color:black;padding:0.5%"><a style="color:white" href="'+lastVisit+'">Last Visited :'+lastTitle+'</a></div>')
 		};
 	}
 	else{

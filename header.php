@@ -65,9 +65,9 @@ if (is_page('Register')) {
         <div class="row" id="megamenu">
             <?php $theurl =  get_site_url();  ?>
             <div class="col span_1_of_1 unhidden">
-                <h2 id="hiddenlogo"><a href="#">Melange</a></h2>
+                <h2 id="hiddenlogo"><a href="http://vitmelange.com">Melange</a></h2>
             </div>
-            <div class="col span_1_of_5 hidden">
+            <div class="col span_1_of_5 hidden" style="padding-top:4%;">
                 <div class="menutag" >
                     <a href="http://vitmelange.com" >MELANGE</a>
                 </div>

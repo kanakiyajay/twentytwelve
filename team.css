@@ -96,7 +96,10 @@
 
 @media only screen and (min-width: 700px) {
     #auth-content {
-        background: -webkit-linear-gradient(top, rgb(239, 73, 57) 0%, rgb(245, 134, 63) 100%)
+        background: -webkit-linear-gradient(top, rgb(239, 73, 57) 0%, rgb(245, 134, 63) 100%);
+        background: -moz-linear-gradient(top, rgb(239, 73, 57) 0%, rgb(245, 134, 63) 100%);
+        background: -o-linear-gradient(top, rgb(239, 73, 57) 0%, rgb(245, 134, 63) 100%);
+        background: linear-gradient(top, rgb(239, 73, 57) 0%, rgb(245, 134, 63) 100%);
         }
     }
 @media only screen and (max-width: 580px) {
@@ -106,7 +109,7 @@
         }
     .author {
         float: none;
-        width: 76%;
+        width: 86%;
         margin: 4px auto
         }
     .description {

@@ -117,10 +117,9 @@
     left: 0;
     top: 0;
     padding: 0.2% 0%;
-    background: rgba(231, 144, 13, 0.7);
+    background: rgba(231, 144, 13, 0.9);
     color: white;
     z-index: 100;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.25, rgba(203, 113, 3, 1)), color-stop(1, rgba(227, 125, 17, 1)));
     overflow: hidden;
     width: 100%;
     display: none
@@ -161,6 +160,7 @@
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
     float: left;
+    padding-top: 0.7%;
     width: 80%
     }
 
@@ -190,10 +190,10 @@
     }
 
 .sub-menu li a {
-    -moz-transition: 0.5s ease-in;
-    -o-transition: 0.5s ease-in;
-    -webkit-transition: 0.5s ease-in;
-    transition: 0.5s ease-in;
+    -moz-transition:all 0.2s ease-in;
+    -o-transition:all 0.2s ease-in;
+    -webkit-transition:all 0.2s ease-in;
+    transition:all 0.2s ease-in;
     display: block;
     width: 100%;
     text-transform: lowercase;
@@ -207,6 +207,7 @@
     }
 
 footer {
+    display: none;
     position: absolute;
     bottom: 0;
     left: 0;
